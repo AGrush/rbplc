@@ -183,7 +183,9 @@
     width: 300px;
     height: calc(100vh - 122px);
     overflow: hidden;
-    position: absolute;
+    position: fixed;
+    padding-top: 154px;
+    top: 0;
     transition: 0.5s all;
     left: -300px;
     z-index: 1;
@@ -225,6 +227,7 @@
     &__logo {
         justify-self: center;
         font-size: rem-calc(28);
+        z-index: 3;
         img {
             max-width: 180px;
         }
