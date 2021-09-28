@@ -1,3 +1,5 @@
+<?php /* Template Name: Home Template */ ?>
+
 <?php get_header("myheader") ?>
 <div class="o-container u-margin-bottom-40">
     <div class="o-row">

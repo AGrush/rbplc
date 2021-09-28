@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<!--| add language dynamically -->
 <html <?php language_attributes(); ?>>
 <head>
-    <!--| bloginfo returns information about blog from set list of queries -->
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="preload" href="dist/assets/fonts/Sweet-Sans-Bold/09121956-e278-4bed-a007-66c38b533104-3.woff" as="font" type="font/woff2" crossorigin> -->
-
-    <!-- title tag will be generated automatically with wp_head hook, also css can be injected here-->
     <?php wp_head(); ?>
 </head>
-<!-- adds custom useful wp classes -->
 <body <?php body_class(); ?> >
     <!-- skip link for keyboard accessibility of main conent -->
     <a class="u-skip-link" href="#content"><?php esc_attr_e('Skip to content', '_themename'); ?></a>
-    <header role="banner" class="u-margin-bottom-40">
+    <header role="banner">
         <div class="c-header">
-            <div class="o-container u-flex u-align-middle">
+            <div class="o-container u-flex u-align-middle u-justify-center">
 
                 <div class="c-burger-btn">
                     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
@@ -31,7 +25,6 @@
 
 
                 <div class="c-header__logo u-flex">
-                    <!-- home_url is the website address -->
                     <?php if(has_custom_logo( )) {
                         the_custom_logo();
                     } else { ?>
@@ -56,7 +49,7 @@
         </div>
     </header>
 
-
+ 
     <div id="content">
 
     

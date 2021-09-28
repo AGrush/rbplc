@@ -18,7 +18,7 @@
     }
 ?>
 <?php if($widgets_active) { ?>
-    <!-- "c-footer c-footer--<?php echo $footer_bg; ?>" 
+    <!-- "c-footer c-footer--<Xphp echo $footer_bg; ?>" 
          `c-footer c-footer--${footer_bg}` 
          in js 
     -->

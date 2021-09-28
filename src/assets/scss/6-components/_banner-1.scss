@@ -1,0 +1,40 @@
+.c-banner-1{
+  display: flex;
+
+  &__big-img{
+    width: 50%;
+  }
+  .copy-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+    max-width: 360px;
+    &__heading {
+
+      h1{
+        font-family: SweetSansBold;
+        font-variant: small-caps;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.85;
+        letter-spacing: 2px;
+        color: #1f1f1e;
+      }
+      
+    }
+    &__text{
+      font-family: SweetSans;
+      font-size: 15px;
+      line-height: 1.31;
+      letter-spacing: 0.44px;
+    }
+  
+    
+  }
+  &__small-img{
+    
+  }
+}

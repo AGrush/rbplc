@@ -1,7 +1,7 @@
 <!-- form to override the default wordpress form -->
 <form role="search" method="get" class="c-search-form" action="<?php echo esc_url( home_url('/') ) ?>">
     <label class="c-search-form__label">
-        <!-- this bit is for accessibility -->
+        <!-- accessibility -->
         <span class="screen-reader-text">
             <?php echo esc_html_x( 'Search for:', 'accessibility search label', '_themename' ) ?>
         </span>
@@ -13,7 +13,7 @@
 </form> 
 
 <!-- All YOU NEED FOR A BASIC FORM IN WP
-<form role="search" method="get" class="c-search-form" action="<?php echo esc_url( home_url('/') ) ?>">
+<form role="search" method="get" class="c-search-form" action="<Xphp echo esc_url( home_url('/') ) ?>">
 <input type="search" name="s"/>
 <button type="submit">search</button>
 </form>  -->

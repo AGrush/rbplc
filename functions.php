@@ -4,6 +4,7 @@
 require_once('lib/customize.php');
 
 require_once('lib/helpers.php');
+
 require_once('lib/enqueue-assets.php');
 
 //need sidebars defined to have 'Widgets' option in 'Appearance'

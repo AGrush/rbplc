@@ -71,7 +71,7 @@ function _themename_customize_register($wp_customize) {
   ));
   //ADD SETTING IN CUSTOMIZER
   $wp_customize->add_setting('_themename_accent_colour', array(
-      'default' => '#20ddae',
+      'default' => '#000',
       //make the changes instant instead of refreshing the whole iframe
       'transport' => 'postMessage',
       //sanitize_hex_color - internal wp hex color sanitise function

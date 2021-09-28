@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.u-justify-center{
+    justify-content: center;
+}
+
 @each $dir in row row-reverse column column-reverse {
     .u-flex-direction-#{$dir} {
         flex-direction: #{$dir};
