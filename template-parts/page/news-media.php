@@ -2,7 +2,7 @@
 
     <header class="c-page__header u-flex u-justify-center">
         <h1 class="c-page__title">
-        our-purpose.php
+        news-media.php
         </h1>
     </header>
 

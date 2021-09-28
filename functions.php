@@ -26,7 +26,7 @@ require_once('lib/delete-post.php');
 require_once('lib/include-plugins.php');
 
 //change comments markup
-require_once('lib/comment-callback.php');
+// require_once('lib/comment-callback.php');
 
 //image rules
 require_once('lib/images.php');
