@@ -41,6 +41,7 @@ let secondLvlBackArrow = document.querySelectorAll('#menu-all-pages > .menu-item
 let thirdLvlBackArrow = document.querySelectorAll('#menu-all-pages > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu >.sub-menu__nav > .back-arrow')
 let navContainer = document.querySelector('.c-navigation>.o-container')
 
+
 firstLvlMenusWithChildren.forEach(menu=>{
 
     menu.addEventListener('click', (e)=>{
@@ -54,7 +55,7 @@ firstLvlMenusWithChildren.forEach(menu=>{
                 menu.classList.remove('open')
                 navContainer.classList.remove('lvl2')
             }
-            console.log(e.target)
+            // console.log(e.target)
         } else {
             firstLvlMenusWithChildren.forEach(menu=>{
                 if(menu.classList.contains('open')){
@@ -107,23 +108,31 @@ let burgerBtn = document.querySelector('.c-burger-btn .openSidebarMenu')
 let cNavigation = document.querySelector('.c-navigation')
 let newDiv= document.createElement("div")
 let menuItemHasChildren = document.querySelectorAll('.menu-item-has-children')
+let cHeader = document.querySelector('.c-header');
+let cHeaderContainer = document.querySelector('.c-header > .o-container');
 
 burgerBtn.addEventListener('click', (e)=>{
     
     if(cNavigation.classList.contains('open')){
         cNavigation.classList.remove('open')
+        cHeader.classList.remove('open')
         newDiv.remove();
         closeAllMenus();
 
     } else {
         cNavigation.classList.add('open')
+        cHeader.classList.add('open')
+  
+        //seethrough close menu film
         newDiv.classList.add("c-close-menu-film")
         cNavigation.insertAdjacentElement("afterend", newDiv);
         newDiv.addEventListener('click',()=>{
             cNavigation.classList.remove('open')
+            cHeader.classList.remove('open')
             closeAllMenus()
             document.getElementById("openSidebarMenu").checked = false;
             newDiv.remove();
+            
         })
     }
     
@@ -141,4 +150,24 @@ function closeAllMenus() {
             navContainer.classList.remove('lvl3')
         }
     })
+}
+
+
+//make header smaller on scroll
+setTimeout(headerSmaller, 100);
+
+function headerSmaller(){
+  let top = window.pageYOffset || document.documentElement.scrollTop;
+//console.log(top)
+  if(top<110){
+    setTimeout(headerSmaller, 100);
+    if(cHeader.classList.contains('smaller')){
+        cHeader.classList.remove('smaller')
+    }
+  } else {
+    if(!cHeader.classList.contains('smaller')){
+        cHeader.classList.add('smaller')
+    }
+    setTimeout(headerSmaller, 100);
+  }
 }

@@ -1,13 +1,12 @@
 @import './1-settings/global';
 @import './1-settings/colours';
+@import './1-settings/fonts';
 @import './1-settings/break-points';
-@import './1-settings/typography';
+
 
 @import './2-tools/units';
-@import './2-tools/breakpoint';
 
 @import './3-generic/normalize';
-@import './3-generic/box-sizing';
 
 @import './4-elements/general';
 @import './4-elements/typography';
@@ -26,8 +25,8 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './5-objects/wp';
 @import './5-objects/grid';
 
+//global components
 @import './6-components/post';
-@import './6-components/banner-1';
 @import './6-components/button-1';
 @import './6-components/page';
 @import './6-components/widget';
@@ -37,6 +36,11 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './6-components/search-form';
 @import './6-components/nav-links';
 
+//homepage components
+@import './6-components/homepage/banner-1';
+@import './6-components/homepage/who-we-are';
+
 @import './7-utility/helpers';
 @import './7-utility/flex';
 @import './7-utility/margins';
+@import './7-utility/paddings';

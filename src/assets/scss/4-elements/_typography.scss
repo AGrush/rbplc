@@ -8,12 +8,27 @@ p {
     font-size: inherit;
     line-height: $paragraph-lineheight;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.44px;
     // word-break: break-all;
     // word-break: break-word;
     // -webkit-hyphens: auto;
     // -moz-hyphens: auto;
     // -ms-hyphens: auto;
     // hyphens: auto; 
+
+    @media (max-width: $tablet-width){
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    @media (max-width: $mobile-width){
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    @media (max-width: $mobile-width){
+        font-size: 13px;
+        line-height: 1.23;
+        letter-spacing: 0.36px;
+    }
 }
 
 a {   
@@ -33,9 +48,9 @@ a {
     // &:active {   
     //     color: $primary-colour;      
     // }
-    &:focus {   
-        border: none; 
-    }
+    // &:focus {   
+    //     border: none; 
+    // }
 }
 
 // hr {
@@ -59,18 +74,21 @@ a {
 //     font-size: $small-font-size;
 //     line-height: inherit;
 // }
-h1, h2, h3, h4, h5, h6 {
+
+
+h1 {
     font-family: $body-font-family;
-    font-style: $header-font-style;
-    font-weight: $header-font-weight;
     color: $header-color;
     line-height: $header-lineheight;
     margin-bottom: $header-margin-bottom;
     text-rendering: optimizeLegibility;
-    word-break: break-word;
-    small {
-        line-height: 0;
-        color: $header-small-font-color;
+    font-family: SweetSansBold;
+    font-variant: small-caps;
+    font-size: 40px;
+    letter-spacing: 2px;
+
+    @media (max-width: $tablet-width){
+        font-size: 30px;
     }
 }
 // @each $size, $headers in $header-styles {

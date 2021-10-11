@@ -1,12 +1,22 @@
 .c-button-1{
-  color: #000!important;
-  padding: 10px 7px;
+  display: inline-block;
+  color: #000;
+  padding: 9px 12px;
   border: solid 1px #d9d6df;
   text-align: center;
   width: auto;
   font-family: SweetSansBold;
   font-size: 14px;
-  min-width: 192px;
+  margin-top: 10px;
+  min-width: 152px;
   text-transform: uppercase;
   align-self: start;
+  transition: 0.3s all;
+
+  &:hover{
+    color: #fff;
+    background-color: #000;
+    border: solid 1px #000;
+    transition: 0.3s all;
+  }
 }

@@ -131,7 +131,7 @@
                 display: flex;
                 align-self: center;
                 text-align: right;
-                z-index: 2;
+                z-index: 3;
                 left: rem-calc(6px);
                 cursor: pointer;
                 transition: 0.3s all;
@@ -148,7 +148,7 @@
                 display: flex;
                 align-self: center;
                 text-align: right;
-                z-index: 2;
+                z-index: 3;
                 right: 0!important;
             }
 
@@ -181,19 +181,29 @@
     background-color: #1f1f1e;
     color: #ffffff;
     width: 300px;
-    height: calc(100vh - 122px);
+    height: calc(100vh - 98px);
     overflow: hidden;
     position: fixed;
-    padding-top: 154px;
+    padding-top: 110px;
     top: 0;
     transition: 0.5s all;
     left: -300px;
-    z-index: 1;
-    transition: 0.3s all;
+    z-index: 3;
+    transition: 0.00s all;
+
+
+    @media (max-width: $mobile-width){
+        padding-top: 70px;
+    }
+
 
     &.open{
         transition: 0.3s all;
         left: 0;
+    }
+
+    &.top{
+        z-index: 4;
     }
 
     nav {
@@ -215,19 +225,54 @@
             }
         }
     }
+
+    .c-burger-btn{
+        top: 26px;
+        transition: 0.3s all;
+        z-index: 4;
+    }
 }
 
 .c-header {
     display: flex;
     background-color: #1f1f1e;
-    padding: rem-calc(40) 0;
+    height: 110px;
     color: #ffffff;
-    z-index: 1;
+    z-index: 3;
+    transition: 0.3s all;
+    position: fixed;
+    width: 100%;
+    transition: 0.1s all;
+
+    @media (max-width: $mobile-width){
+        height: 70px;
+    }
+    
+
+    &.smaller{
+        height: 70px;
+        transition: 0.1s all;
+
+        ~ .c-navigation{
+            padding-top: 70px;
+            transition: 0.1s all;
+            @media (max-width: $mobile-width){
+                padding-top: 70px;
+            }
+        }
+    }
+
+
+    &.open{
+        z-index: 4;
+    }
+
+
 
     &__logo {
         justify-self: center;
         font-size: rem-calc(28);
-        z-index: 3;
+        z-index: 4;
         img {
             max-width: 180px;
         }
@@ -241,7 +286,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 0;
+    z-index: 2;
 }
 
 
@@ -251,6 +296,8 @@
     align-self: center;
     position: absolute;
     left: 10px;
+    transition: 0.3s all;
+    z-index: 6;
 
     .sidebarMenu {
         height: 100%;
@@ -360,9 +407,5 @@
         margin-top: -9px;
     }
 }
-
-
-
-
 
 

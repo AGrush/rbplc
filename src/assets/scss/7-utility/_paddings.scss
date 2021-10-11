@@ -1,0 +1,17 @@
+$i: 0;
+$max: 140;
+@while $i <= $max {
+    .u-padding-top-#{$i} {
+        padding-top: rem-calc($i) !important;
+    }
+    .u-padding-bottom-#{$i} {
+        padding-bottom: rem-calc($i) !important;
+    }
+    .u-padding-left-#{$i} {
+        padding-left: rem-calc($i) !important;
+    }
+    .u-padding-right-#{$i} {
+        padding-right: rem-calc($i) !important;
+    }
+    $i: $i + 5;
+}

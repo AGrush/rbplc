@@ -4,10 +4,7 @@ html {
 }
 
 body {
-    background: $body-background;
     font-family: $body-font-family;
-    font-weight: $global-weight-normal;
-    line-height: $global-lineheight;
     color: $body-font-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
