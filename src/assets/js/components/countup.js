@@ -1,5 +1,8 @@
 import { CountUp } from '../libraries/countup';
 
+//intersection observer setup
+let observedElement;
+
 //counter divs
 var hpStat1 = document.getElementById('hp-stat1')
 var hpStat2 = document.getElementById('hp-stat2')
@@ -11,7 +14,7 @@ let hpStat2countUp = 0;
 let hpStat3countUp = 0;
 let hpStat4countUp = 0;
 
-
+//take the number countUp will use from the wp connected field onload.
 if(hpStat1){
   hpStat1countUp = hpStat1.innerHTML
 } 
@@ -55,7 +58,31 @@ const countUpStat4 = new CountUp('hp-stat4', hpStat4countUp, countUpOptions4);
 
 
 window.onload = function () {
-  //only load on page where it exists
+  startObservingCountUpIntersection ()
+}
+
+
+function startObservingCountUpIntersection (){
+  //Intersection observer to start hp number animation
+  const countUpObserver = new IntersectionObserver((entries, countObserver) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const myTarget = entry.target
+            console.log("the target is  ", myTarget)
+            startCountingUp();
+            // myTarget.src = myTarget.dataset.src
+            countObserver.unobserve(myTarget);
+        }
+    })
+  });
+  const arr = document.querySelectorAll("[data-id='io1']")
+  arr.forEach((v) => {
+      countUpObserver.observe(v);
+  })
+}
+
+function startCountingUp () {
+  //only load on page where countUp exists
   if(hpStat1){
     //only load if no errors in countUp
     if (!countUpStat1.error) {
@@ -68,6 +95,8 @@ window.onload = function () {
     }
   }
 }
+
+
 
 //Ease functions
 function fastEase(t, b, c, d) {

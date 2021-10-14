@@ -35,18 +35,20 @@ headerSubMenu.forEach(subMenu=>{
 
 
 //nav js
-let firstLvlMenusWithChildren = document.querySelectorAll('#menu-all-pages>.menu-item-has-children')
-let secondLvlMenusWithChildren = document.querySelectorAll('#menu-all-pages > .menu-item-has-children > .sub-menu > .menu-item-has-children')
-let secondLvlBackArrow = document.querySelectorAll('#menu-all-pages > .menu-item-has-children > .sub-menu > .sub-menu__nav > .back-arrow')
-let thirdLvlBackArrow = document.querySelectorAll('#menu-all-pages > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu >.sub-menu__nav > .back-arrow')
+let firstLvlMenusWithChildren = document.querySelectorAll('#menu-main-menu>.menu-item-has-children')
+let secondLvlMenusWithChildren = document.querySelectorAll('#menu-main-menu > .menu-item-has-children > .sub-menu > .menu-item-has-children')
+let secondLvlBackArrow = document.querySelectorAll('#menu-main-menu > .menu-item-has-children > .sub-menu > .sub-menu__nav > .back-arrow')
+let thirdLvlBackArrow = document.querySelectorAll('#menu-main-menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .sub-menu >.sub-menu__nav > .back-arrow')
 let navContainer = document.querySelector('.c-navigation>.o-container')
 
 
 firstLvlMenusWithChildren.forEach(menu=>{
 
     menu.addEventListener('click', (e)=>{
+        console.log(e.target)
+
         e.stopPropagation();
-        if(e.target.parentElement.classList.contains('menu-item-has-children')){
+        if(e.target.parentElement.classList.contains('menu-item-has-children') || e.target.classList.contains('menu-item-has-children')){
             e.preventDefault(); 
         }
         
