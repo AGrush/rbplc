@@ -51,12 +51,17 @@
     .copy-inner{
       padding-left: 80px;
       position: relative;
+
       @media (max-width: $tablet-width){
         padding-left: 60px;
       }
       @media (max-width: $mobile-width){
         padding-left: initial;
         max-width: 320px;
+      }
+
+      .c-button-1{
+        margin-top: 10px;
       }
     }
 

@@ -1,17 +1,16 @@
 .c-button-1{
   display: inline-block;
   color: #000;
-  padding: 9px 12px;
+  padding: 14px 28px;
   border: solid 1px #d9d6df;
   text-align: center;
   width: auto;
   font-family: SweetSansBold;
   font-size: 14px;
-  margin-top: 10px;
   min-width: 152px;
   text-transform: uppercase;
-  align-self: start;
   transition: 0.3s all;
+  z-index: 1;
 
   &:hover{
     color: #fff;

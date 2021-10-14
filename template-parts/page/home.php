@@ -1,6 +1,6 @@
 
 
-<div <?php post_class('c-page u-margin-bottom-20'); ?>>
+<div <?php post_class('c-page'); ?>>
     <div class="c-page__content">
 
     <div class="c-banner-1">
@@ -88,7 +88,18 @@
     </div>
        
     <div class="c-links">
-        <div class="wrapper-links">
+        <div class="c-links__wrapper-links">
+
+            <?php $image = get_field('home_page__section_3__squiggle1');
+            if( !empty( $image ) ): ?>
+                <img class="c-links__wrapper-links__small-img1 lazyload" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            <?php endif; ?>
+
+            <?php $image = get_field('home_page__section_3__squiggle2');
+            if( !empty( $image ) ): ?>
+                <img class="c-links__wrapper-links__small-img2 lazyload" data-src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            <?php endif; ?>
+
             <a href="<?php the_field('home_page__section_3__link1__address');?>" class="c-button-1">
                 <?php the_field('home_page__section_3__link1__text');?>
             </a>
@@ -104,44 +115,42 @@
             <a href="<?php the_field('home_page__section_3__link5__address');?>" class="c-button-1">
                 <?php the_field('home_page__section_3__link5__text');?>
             </a>
+
         </div>
-        <div class="wrapper-images">
-            <div class="small-images-wrapper">
-                <div class="video-wrapper">
-                    <?php
-                        // Load value.
-                        $iframe = get_field('home_page__section_3__small_square_video');
+        
+        <div class="c-links__wrapper-video">
+            <div class="iframe-wrapper">
+                <?php
+                    // Load value.
+                    $iframe = get_field('home_page__section_3__square_video');
 
-                        // Use preg_match to find iframe src.
-                        preg_match('/src="(.+?)"/', $iframe, $matches);
-                        $src = $matches[1];
+                    // Use preg_match to find iframe src.
+                    preg_match('/src="(.+?)"/', $iframe, $matches);
+                    $src = $matches[1];
 
-                        // Add extra parameters to src and replcae HTML.
-                        $params = array(
-                            'controls'  => 0,
-                            'hd'        => 1,
-                            'autoplay'  => 1,
-                            'muted'      => 1,
-                            'autohide'  => 1,
-                            'loop'      => 1
-                        );
-                        $new_src = add_query_arg($params, $src);
-                        $iframe = str_replace($src, $new_src, $iframe);
+                    // Add extra parameters to src and replcae HTML.
+                    $params = array(
+                        'controls'  => 0,
+                        'hd'        => 1,
+                        'autoplay'  => 1,
+                        'muted'      => 1,
+                        'autohide'  => 1,
+                        'loop'      => 1
+                    );
+                    $new_src = add_query_arg($params, $src);
+                    $iframe = str_replace($src, $new_src, $iframe);
 
-                        // Add extra attributes to iframe HTML.
-                        $attributes = 'frameborder="0"';
-                        $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
-
-                        // Display customized HTML.
-                        echo $iframe;
-                    ?>
-                </div>
-               
-                <img src="https://place-hold.it/300x300" alt="" class="small-img">
+                    // Add extra attributes to iframe HTML.
+                    $attributes = 'frameborder="0" class="lazyload"';
+                    $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+                    $iframe = preg_replace('~<iframe[^>]*\K(?=src)~i','data-',$iframe);
+                    // Display customized HTML.
+                    echo $iframe;
+                ?>
             </div>
-            <img src="https://place-hold.it/300x600" alt="" class="large-img">
         </div>  
     </div>
+
     </div>
 </div>
 

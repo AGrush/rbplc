@@ -4,10 +4,13 @@ import { CountUp } from '../libraries/countup';
 var hpStat1 = document.getElementById('hp-stat1')
 var hpStat2 = document.getElementById('hp-stat2')
 var hpStat3 = document.getElementById('hp-stat3')
+var hpStat4 = document.getElementById('hp-stat4')
 
 let hpStat1countUp = 0;
 let hpStat2countUp = 0;
 let hpStat3countUp = 0;
+let hpStat4countUp = 0;
+
 
 if(hpStat1){
   hpStat1countUp = hpStat1.innerHTML
@@ -17,6 +20,9 @@ if(hpStat2){
 }
 if(hpStat3){
   hpStat3countUp = hpStat3.innerHTML
+}
+if(hpStat4){
+  hpStat4countUp = hpStat4.innerHTML
 }
 
 //init counters
@@ -39,7 +45,11 @@ let countUpOptions3 = {
 }
 const countUpStat3 = new CountUp('hp-stat3', hpStat3countUp, countUpOptions3);
 
-
+let countUpOptions4 = {
+  startVal: 0,
+  easingFn: slowEase
+}
+const countUpStat4 = new CountUp('hp-stat4', hpStat4countUp, countUpOptions4);
 
 
 
@@ -52,6 +62,7 @@ window.onload = function () {
       countUpStat1.start();
       countUpStat2.start();
       countUpStat3.start();
+      countUpStat4.start();
     } else {
       console.error(countUpStat1.error);
     }

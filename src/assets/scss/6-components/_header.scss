@@ -233,6 +233,14 @@
     }
 }
 
+.admin-bar .c-navigation{
+    margin-top: 32px;
+
+    @media (max-width: $mobile-width){
+        margin-top: 46px;
+    }
+}
+
 .c-header {
     display: flex;
     background-color: #1f1f1e;

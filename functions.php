@@ -16,6 +16,10 @@ require_once('lib/theme-support.php');
 //nav bar support
 require_once('lib/navigation.php');
 
+//nav bar support
+require_once('lib/acf.php');
+
+
 //delete-posts
 // require_once('lib/delete-post.php');
 

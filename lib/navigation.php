@@ -3,7 +3,8 @@
 function _themename_register_menus() {
     register_nav_menus( array(
         'main-menu' => esc_html__('Main Menu', '_themename'),
-        'footer-menu' => esc_html__('Footer Menu', '_themename')
+        'footer-menu' => esc_html__('Footer Menu', '_themename'),
+        'social-menu' => esc_html__('Social Menu', '_themename')
     ) );
 }
 // init: Fires after WordPress has finished loading but before any headers are sent. Many plugins instantiate themselves on it for all sorts of reasons (e.g. they need a user, a taxonomy, etc.)
