@@ -62,13 +62,14 @@ window.onload = function () {
 }
 
 
+
 function startObservingCountUpIntersection (){
   //Intersection observer to start hp number animation
   const countUpObserver = new IntersectionObserver((entries, countObserver) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const myTarget = entry.target
-            console.log("the target is  ", myTarget)
+            // console.log("the target is  ", myTarget)
             startCountingUp();
             // myTarget.src = myTarget.dataset.src
             countObserver.unobserve(myTarget);

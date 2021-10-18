@@ -32,15 +32,18 @@
   }
 
   .copy-wrapper{
+    overflow: hidden;
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
     width: 50%;
     z-index: 1;
+
     @media (max-width: $tablet-width){
       flex-direction: column;
     }
+    
     @media (max-width: $mobile-width){
       padding: 20px 0;
       align-items: flex-start;

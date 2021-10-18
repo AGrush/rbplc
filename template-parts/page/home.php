@@ -33,7 +33,59 @@
                 echo $iframe;
             ?>
         </div>
-        <div class="copy-wrapper">
+
+        <!-- <div class="box">
+            <div class="target"> Target </div>
+            <span>In viewport: <strong>false</strong></span>
+        </div> -->
+
+        <div class="copy-wrapper" data-id="observedArea">
+            <!-- <div class="c-tickertape">
+                <a class="tickertape-wrapper">
+                    <span>
+                       abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
+                    &nbsp;&nbsp;&nbsp;</span>
+                </a>
+                <a class="tickertape-wrapper2">
+                    <span>
+                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
+                    &nbsp;&nbsp;&nbsp;</span>
+                </a>
+                <a class="tickertape-wrapper3">
+                    <span>
+                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
+                    &nbsp;&nbsp;&nbsp;</span>
+                </a>
+                <a class="tickertape-wrapper4">
+                    <span>
+                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
+                    &nbsp;&nbsp;&nbsp;</span>
+                </a>
+            </div> -->
+
+            
+            <div class="box">
+                <div class="collection">
+                    <div class="first-box">
+                        <div class="target1"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target2"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target3"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target4"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target5"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                    </div>
+                    <div class="second-box">
+                        <div class="target1"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target2"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target3"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target4"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                        <div class="target5"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
+                    </div>
+                </div>
+                <span>In viewport: <strong>false</strong></span>
+            </div>
+
+
+
             <div class="copy-inner">
                 <div class="copy-wrapper__heading">
                     <h1> 
@@ -41,6 +93,7 @@
                     </h1>
                 </div>
                 <div class="copy-wrapper__text">
+                    
                     <p>
                         <?php the_field('home_paragraph_text'); ?>
                     </p> 
