@@ -1,93 +1,29 @@
-/*
-.c-tickertape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  color: #000;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  background: #e9c5c7;
-  width: 100%;
-  animation: mdovemarquee 5s linear forwards;
-
-
-  @media (max-width: $mobile-width){
-    height: 27px;
-  }
-
-  .tickertape-wrapper {
-    font-family: SweetSansBold, "Arial", sans-serif;
-    font-variant: small-caps;
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: lowercase;
-    white-space: nowrap;
-
-  }
-}
-
-@keyframes movemarquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-200%, 0, 0);
-  }
-}
-*/
-
-.box {
+.text-roller-wrapper {
   background: #e9c5c7;;
   position: absolute;
-  margin-bottom: 16px;
-  height: 137px;
+  display: flex;
+  align-items: center;
+  height: 38px;
   width: 100%;
   top: 0;
   left: 0;
 
-  .collection{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    right: -50px;
-    transform: translateX(101%);
+  @media (max-width: $mobile-width){
+    height: 28px;
+  }
+
+  #my-text-roller{
+    font-family: SweetSansBold;
+    font-variant: small-caps;
+    color: #262624;
+    font-size: 20px;
+    width: 100%;
     white-space: nowrap;
 
-    .first-box, .second-box{
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-
-      [class*='target'] {
-        width: auto;
-        display: inline;
-        line-height: 80px;
-        text-align: center;
-        background: #275EFE;
-        color: #fff;
-        position: relative;
-        white-space: nowrap;
-      }
+    @media (max-width: $mobile-width){
+      font-size: 14px;
     }
   }
-  
-  span {
-      display: block;
-      position: absolute;
-      text-align: center;
-      color: #646B8C;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      font-size: 14px;
-      padding: 8px 0;
-      strong {
-          font-weight: bold;
-          color: #2B3044;
-      }
-  }
 }
+
+

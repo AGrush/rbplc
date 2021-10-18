@@ -36,12 +36,13 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './6-components/search-form';
 @import './6-components/nav-links';
 
-//homepage components
+//PAGE components
 @import './6-components/homepage/banner-1';
 @import './6-components/homepage/who-we-are';
 @import './6-components/homepage/links';
 @import './6-components/homepage/tickertape';
 
+@import './6-components/our-purpose/tiktok';
 
 @import './7-utility/helpers';
 @import './7-utility/flex';

@@ -40,52 +40,8 @@
         </div> -->
 
         <div class="copy-wrapper" data-id="observedArea">
-            <!-- <div class="c-tickertape">
-                <a class="tickertape-wrapper">
-                    <span>
-                       abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
-                    &nbsp;&nbsp;&nbsp;</span>
-                </a>
-                <a class="tickertape-wrapper2">
-                    <span>
-                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
-                    &nbsp;&nbsp;&nbsp;</span>
-                </a>
-                <a class="tickertape-wrapper3">
-                    <span>
-                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
-                    &nbsp;&nbsp;&nbsp;</span>
-                </a>
-                <a class="tickertape-wrapper4">
-                    <span>
-                    abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ |||||
-                    &nbsp;&nbsp;&nbsp;</span>
-                </a>
-            </div> -->
-
-            
-            <div class="box">
-                <div class="collection">
-                    <div class="first-box">
-                        <div class="target1"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target2"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target3"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target4"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target5"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                    </div>
-                    <div class="second-box">
-                        <div class="target1"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target2"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target3"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target4"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                        <div class="target5"> abcdefghijklmonpqrstuvwz 1234567890 ----====+++ """ ||||| </div>
-                    </div>
-                </div>
-                <span>In viewport: <strong>false</strong></span>
-            </div>
-
-
-
+           
+           
             <div class="copy-inner">
                 <div class="copy-wrapper__heading">
                     <h1> 
@@ -107,6 +63,12 @@
             </div>
            
         </div>
+
+        <div class="text-roller-wrapper">
+                <div id="my-text-roller">
+                    <span><?php the_field('home_page__section_1__scrolling_text_marquee'); ?> &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+            </div>
         <?php $image = get_field('home_section1_small_image');
         if( !empty( $image ) ): ?>
             <img class="c-banner-1__small-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
