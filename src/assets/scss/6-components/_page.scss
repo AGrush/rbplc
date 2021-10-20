@@ -1,8 +1,9 @@
 .c-page {
     background-color: #ffffff;
-    min-height: 100vh;
+    // min-height: 100vh;
     // padding: rem-calc(20);
     overflow: hidden;
+
     &__header {
         margin-bottom: rem-calc(20);
     }

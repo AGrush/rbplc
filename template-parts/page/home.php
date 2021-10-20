@@ -5,6 +5,11 @@
 
     <div class="c-banner-1">
         <div class="video-wrapper">
+
+            <?php $imageHpPoster = get_field('home_page__section_1__video_poster');
+                if( !empty( $imageHpPoster ) ): ?>
+                    <img class="c-banner-1__mobile-poster" src="<?php echo esc_url($imageHpPoster['url']); ?>" alt="<?php echo esc_attr($imageHpPoster['alt']); ?>" />
+            <?php endif; ?>
             <?php
                 // Load value.
                 $iframe = get_field('home_top_video');
@@ -84,7 +89,7 @@
         </div>
         <div class="bottom-wrapper" data-id="io1">
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat1"><?php the_field('home_page__section_2__stat1__number'); ?></p><span><?php the_field('home_page__section_2__stat1__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat1" class="decimal"><?php the_field('home_page__section_2__stat1__number'); ?></p><span><?php the_field('home_page__section_2__stat1__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat1__text'); ?></p>
             </div>
             <div class="stat-wrapper">

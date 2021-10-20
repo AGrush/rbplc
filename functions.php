@@ -19,6 +19,8 @@ require_once('lib/navigation.php');
 //nav bar support
 require_once('lib/acf.php');
 
+//mobile detect
+require_once "lib/Mobile_Detect.php";
 
 //delete-posts
 // require_once('lib/delete-post.php');

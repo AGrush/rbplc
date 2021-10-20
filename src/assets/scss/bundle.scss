@@ -5,6 +5,7 @@
 
 
 @import './2-tools/units';
+@import './2-tools/helpers';
 
 @import './3-generic/normalize';
 
@@ -43,6 +44,7 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './6-components/homepage/tickertape';
 
 @import './6-components/our-purpose/tiktok';
+@import './6-components/our-purpose/text-image-banner';
 
 @import './7-utility/helpers';
 @import './7-utility/flex';

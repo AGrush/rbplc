@@ -6,8 +6,13 @@
   align-items: center;
   justify-content: center;
   padding: 40px;
+  min-height: 600px;
+  @media (max-width: $tablet-width){
+    min-height: 400px;
+  }
+
   @media (max-width: $mobile-width){
-    padding: 40px 20px;
+    padding: 40px 30px;
     align-items: flex-start;
   }
 
@@ -22,9 +27,6 @@
       color: #fff;
       text-transform: lowercase;
     }
-    p{
-
-    }
   }
 
   .bottom-wrapper{
@@ -32,6 +34,7 @@
     flex-direction: row;
     padding: 20px;
     text-align: center;
+
     @media (max-width: $mobile-width){
       flex-direction: column;
       text-align: left;
@@ -46,27 +49,41 @@
       @media (max-width: $tablet-width){
         padding: 0 10px 0 0;
       }
-     &__number{
-      color:#e9c5c7;
-      p{
-        font-size: 120px;
-        font-family: SweetSansBold;
-        display: inline;
-        @media (max-width: $tablet-width){
-          font-size: 70px;
+
+      &__number{
+        color:#e9c5c7;
+        p{
+          font-size: 120px;
+          font-family: SweetSansBold;
+          display: inline;
+          @media (max-width: $tablet-width){
+            font-size: 70px;
+          }
         }
-      }
-      span{
+      } 
 
-      }
-     } 
-
-     &__text{
-      font-variant: small-caps;
-      font-size: 14px;
-    } 
+      &__text{
+        font-variant: small-caps;
+        font-size: 14px;
+      } 
     }
+  }
 
-   
+  .some-links{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    @media (max-width: $mobile-width){
+      flex-direction: column;
+      padding-top: 0;
+    }
+    a{
+      margin: 0 12px;
+
+      @media (max-width: $mobile-width){
+        margin: 10px 0;
+     
+      }
+    }
   }
 }

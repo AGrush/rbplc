@@ -17,13 +17,10 @@ p {
     // hyphens: auto; 
 
     @media (max-width: $tablet-width){
-        font-size: 14px;
+        font-size: 11px;
         line-height: 1.1;
     }
-    @media (max-width: $mobile-width){
-        font-size: 14px;
-        line-height: 1.1;
-    }
+
     @media (max-width: $mobile-width){
         font-size: 13px;
         line-height: 1.23;

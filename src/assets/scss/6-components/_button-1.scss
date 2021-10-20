@@ -12,10 +12,28 @@
   transition: 0.3s all;
   z-index: 1;
 
+  @media (max-width: $tablet-width){
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
   &:hover{
     color: #fff;
     background-color: #000;
     border: solid 1px #000;
     transition: 0.3s all;
+  }
+
+
+  &.m-white-text{
+    
+    color: #fff;
+
+    &:hover{
+      color: #000;
+      background-color: #fff;
+      border: solid 1px #fff;
+      transition: 0.3s all;
+    }
   }
 }

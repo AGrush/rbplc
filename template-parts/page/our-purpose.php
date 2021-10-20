@@ -1,7 +1,17 @@
 <div <?php post_class('c-page'); ?>>
 
 <div class="c-banner-1">
+    
+        <div class="c-banner-1__page-title">
+            <p><?php the_field('our_purpose_page__section_1__page_title'); ?></p>
+        </div>
+
         <div class="video-wrapper">
+            <?php $imageHpPoster = get_field('our_purpose_page__section_1__video_poster');
+                if( !empty( $imageHpPoster ) ): ?>
+                    <img class="c-banner-1__mobile-poster" src="<?php echo esc_url($imageHpPoster['url']); ?>" alt="<?php echo esc_attr($imageHpPoster['alt']); ?>" />
+            <?php endif; ?>
+
             <?php
                 // Load value.
                 $iframe = get_field('our_purpose_page__section_1__video');
@@ -66,7 +76,8 @@
     </div>
 
     <div class="c-tiktok">
-        <div loading="lazy" data-mc-src="ecedd797-5d88-462e-baf6-c79d9d0e4d0b#tiktok"></div>
+        <div data-mc-src="c0fc088c-0f30-4245-95b4-ec3cb4385752#tiktok"></div>
+          
 
         <?php $image = get_field('our_purpose__section_2__below_tiktok_img');
         if( !empty( $image ) ): ?>
