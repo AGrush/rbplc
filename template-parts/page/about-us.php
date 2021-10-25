@@ -100,7 +100,6 @@
         </div>
 
         <div class="copy-wrapper" data-id="observedArea">
-           
             <div class="copy-inner">
                 <div class="copy-wrapper__text">
                     <p>
@@ -108,7 +107,6 @@
                     </p> 
                 </div>
             </div>
-           
         </div>
 
       

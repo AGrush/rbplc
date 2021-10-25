@@ -4,6 +4,7 @@
 
   &__page-title{
     position: absolute;
+    white-space: nowrap;
     left: 0;
     top: 50px;
     z-index: 2;
@@ -14,6 +15,7 @@
     text-transform: lowercase;
     padding: 10px 6px 6px;
     pointer-events: none;
+    
     @media (max-width: $mobile-width){
       padding: 8px 5px 5px;
     }
@@ -227,6 +229,12 @@
     height: auto;
     align-self: center;
     // filter: blur(1px);
+
+    &.m-object-fit{
+      height: 100%;
+      object-fit: cover;
+    }
+    
   }
 
   &.m-fullwidth-desktop{

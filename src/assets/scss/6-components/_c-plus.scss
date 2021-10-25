@@ -1,0 +1,43 @@
+.c-plus {
+  position: relative;
+  width:24px;
+  height:24px;
+  background:#fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:before{
+    content: "";
+    position:absolute;
+    background:#000;
+    left:50%;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    transform:translateX(-50%) rotate(0deg);
+    transition: 0.5s all;
+  }
+
+  &:after{
+    content: "";
+    position:absolute;
+    background:#000;
+    top:50%;
+    left:6px;
+    right:6px;
+    height:2px;
+    transform:translateY(-50%) rotate(0deg);
+    transition: 0.5s all;
+  }
+
+  &.open:before{
+    background:transparent;
+    transition: 0.5s all;
+    transform:translateX(-50%) rotate(90deg);
+  }
+
+  &.open:after{
+    transform: translateY(-50%) rotate(180deg);
+    transition: 0.5s all;
+  }
+}

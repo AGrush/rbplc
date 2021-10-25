@@ -19,7 +19,7 @@ let stat2Decimal = 0;
 let stat3Decimal = 0;
 let stat4Decimal = 0;
 
-//take the number countUp will use from the wp connected field onload.
+//take the number countUp will use from the wp connected field on page load IF the element exists on page (only on hp)
 if(hpStat1){
   hpStat1countUp = hpStat1.innerHTML;
   if(hpStat1.classList.contains('decimal')){
