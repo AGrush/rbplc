@@ -4,6 +4,9 @@
     @media (max-width: $tablet-width){
         padding: 0 rem-calc(10);
     }
+    @media (max-width: $mobile-width){
+        padding: 0 rem-calc(14);
+    }
 }
 
 

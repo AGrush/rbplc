@@ -40,4 +40,29 @@
     transform: translateY(-50%) rotate(180deg);
     transition: 0.5s all;
   }
+
+  &.cross{
+    &:before{
+      content: "";
+      position:absolute;
+      background:#000;
+      left:50%;
+      top:2px;
+      bottom:2px;
+      width:2px;
+      transform:translateX(-50%) rotate(45deg);
+      transition: 0.5s all;
+    }
+    &:after{
+      content: "";
+      position:absolute;
+      background:#000;
+      top:50%;
+      left:2px;
+      right:2px;
+      height:2px;
+      transform:translateY(-50%) rotate(45deg);
+      transition: 0.5s all;
+    }
+  }
 }

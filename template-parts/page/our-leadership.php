@@ -68,7 +68,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__exec_1_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt2">
@@ -81,7 +81,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__exec_2_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt3">
@@ -94,7 +94,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__exec_3_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt4">
@@ -107,7 +107,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__exec_4_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
 
@@ -153,7 +153,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__non-exec_1_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt6">
@@ -166,7 +166,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__non-exec_2_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt7">
@@ -179,7 +179,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__non-exec_3_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leadertxt8">
@@ -192,7 +192,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_1__non-exec_4_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
 
@@ -265,7 +265,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_2__leader14_1_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leaderbelowtxt10">
@@ -278,7 +278,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_2__leader14_2_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leaderbelowtxt11">
@@ -291,7 +291,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_2__leader14_3_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
 
             <div class="wrapper-heads-info" data-id="leaderbelowtxt12">
@@ -304,7 +304,7 @@
                 <p class="wrapper-heads-info__longtext">
                 <?php the_field('our_leadership_page__section_2__leader14_4_longtext');?>
                 </p>
-                <span>X</span>
+                <span class="c-plus cross"></span>
             </div>
         </div>
        
@@ -352,7 +352,7 @@
             <p class="wrapper-heads-info__longtext">
             <?php the_field('our_leadership_page__section_2__leader58_1_longtext');?>
             </p>
-            <span>X</span>
+            <span class="c-plus cross"></span>
         </div>
 
         <div class="wrapper-heads-info" data-id="leaderbelowtxt14">
@@ -365,7 +365,7 @@
             <p class="wrapper-heads-info__longtext">
             <?php the_field('our_leadership_page__section_2__leader58_2_longtext');?>
             </p>
-            <span>X</span>
+            <span class="c-plus cross"></span>
         </div>
 
         <div class="wrapper-heads-info" data-id="leaderbelowtxt15">
@@ -378,7 +378,7 @@
             <p class="wrapper-heads-info__longtext">
             <?php the_field('our_leadership_page__section_2__leader58_3_longtext');?>
             </p>
-            <span>X</span>
+            <span class="c-plus cross"></span>
         </div>
 
         <div class="wrapper-heads-info" data-id="leaderbelowtxt16">
@@ -391,7 +391,7 @@
             <p class="wrapper-heads-info__longtext">
             <?php the_field('our_leadership_page__section_2__leader58_4_longtext');?>
             </p>
-            <span>X</span>
+            <span class="c-plus cross"></span>
         </div>
 
         

@@ -45,7 +45,7 @@ let navContainer = document.querySelector('.c-navigation>.o-container')
 firstLvlMenusWithChildren.forEach(menu=>{
 
     menu.addEventListener('click', (e)=>{
-        console.log(e.target)
+        // console.log(e.target)
 
         e.stopPropagation();
         if(e.target.parentElement.classList.contains('menu-item-has-children') || e.target.classList.contains('menu-item-has-children')){
