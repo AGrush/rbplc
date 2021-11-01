@@ -129,7 +129,7 @@
                 <p class="stat-wrapper__text"><?php the_field('about_us_page__section_2__stat2__text'); ?></p>
             </div>
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat3" class="<?php the_field('about_us_page__section_2__stat3__extra_classes'); ?>"><?php the_field('about_us_page__section_2__stat3__number'); ?></p><span><?php the_field('about_us_page__section_2__stat3__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat3" class="<?php the_field('about_us_page__section_2__stat3__extra_classes'); ?>"><?php the_field('about_us_page__section_2__stat3__number'); ?></p><span><?php the_field('about_us_page__section_2__stat3___unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('about_us_page__section_2__stat3__text'); ?></p>
             </div>
             <div class="stat-wrapper">

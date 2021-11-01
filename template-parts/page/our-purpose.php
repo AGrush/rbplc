@@ -1,6 +1,6 @@
 <div <?php post_class('c-page'); ?>>
 
-<div class="c-banner-1">
+    <div class="c-banner-1">
     
         <div class="c-banner-1__page-title">
             <p><?php the_field('our_purpose_page__section_1__page_title'); ?></p>

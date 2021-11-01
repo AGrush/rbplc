@@ -1,0 +1,44 @@
+.brighterir-shareprice-wrapper {
+  background: #e9c5c7;;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  @media (max-width: $mobile-width){
+    height: 40px;
+  }
+
+  .brighterir-shareprice{
+    position: absolute;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+
+    @media (max-width: $mobile-width){
+      justify-content: center;
+    }
+
+    iframe{
+      border: none; 
+      width: 540px;
+      transform: scale(0.8);
+      margin: 0 auto;
+      position: absolute;
+      border: none;
+      top: 0;
+      right: -90px;
+
+      @media (max-width: $mobile-width){
+        right: initial;
+      }
+    }
+  }
+}
+
+

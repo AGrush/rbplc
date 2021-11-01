@@ -6,8 +6,6 @@
     width: 100%;
     justify-content: center;
 
-
-
     @media (max-width: $mobile-width){
       justify-content: flex-start;
     }
@@ -120,6 +118,7 @@
         line-height: 0.9;
         letter-spacing: 0.58px;
         color: #30312d;
+        margin-bottom: 2px;
         @media (max-width: 1199px){
           font-size: 16px;
         }
@@ -127,6 +126,8 @@
   
       &__position {
         font-size: 18px;
+        margin-bottom: 10px;
+
         @media (max-width: 1199px){
           font-size: 14px;
         }
@@ -141,6 +142,8 @@
         line-height: 1.23;
         letter-spacing: 0.36px;
         color: #2a2b28;
+        margin-bottom: 10px;
+
         @media (max-width: 1390px){
           font-size: 12px;
         }

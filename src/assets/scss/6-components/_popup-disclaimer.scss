@@ -1,0 +1,117 @@
+.c-popup-disclaimer {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .disclaimer-content{
+    width: 750px;
+    height: 510px;
+    position: fixed;
+    z-index: 3;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f1f1e;
+    border: solid 1px #5c5c5c;
+    @media (max-width: $mobile-width){
+      top: 120px;
+      width: 320px;
+      height: 470px;
+    }
+
+    @media (max-width: 350px){
+      height: 440px;
+      width: 310px;
+    }
+
+    .important {
+      font-family: SweetSansMedium;
+      font-variant: small-caps;
+      width: 660px;
+      font-size: 25px;
+      margin: 20px auto 0;
+      line-height: 1;
+      color: #fff;
+      @media (max-width: $mobile-width){
+        width: 100%;
+        padding-left: 20px;
+      }
+
+      @media (max-width: 350px){
+        margin: 5px auto 0;
+      }
+    
+    }
+
+    .disclaimer {
+      font-family: SweetSansBold;
+      font-variant: small-caps;
+      width: 660px;
+      font-size: 25px;
+      margin: 0 auto 14px;
+      line-height: 1;
+      color: #fff;
+      @media (max-width: $mobile-width){
+        width: 100%;
+        padding-left: 20px;
+      }
+
+      @media (max-width: 350px){
+        margin: 0 auto 5px;
+      }
+    }
+
+    .body-copy {
+      font-family: SweetSans;
+      width: 620px;
+      height: 300px;
+      padding: 20px;
+      margin: 0 auto 20px;
+      overflow: scroll;
+      background-color: #313130;
+      color: #fff;
+      scrollbar-color: #e9c5c7;
+
+      @media (max-width: $mobile-width){
+        width: 260px;
+        padding: 10px;
+        margin: 0 auto 14px;
+      }
+
+      p{
+        font-size: 10px!important;
+        line-height: 1.3!important;
+      }
+    }
+
+    .buttons{
+      width: 660px;
+      margin: 0 auto;
+
+      @media (max-width: $mobile-width){
+        width: 280px;
+
+      }
+
+      &>a {
+        color: #fff;
+        border: 1px solid #fff;
+        max-width: 90px;
+        min-width: 90px;
+
+        &.accept{
+          margin-right: 10px;
+        }
+
+        &.decline{
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}

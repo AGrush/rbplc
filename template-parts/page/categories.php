@@ -37,7 +37,7 @@
                     
                     <h2><?php the_field('left_column_item_1__either_heading'); ?></h2>
                     <p> <?php the_field('left_column_item_1__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('left_column_item_1__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('left_column_item_1__long_text'); ?> </p>
@@ -64,7 +64,7 @@
                     
                     <h2><?php the_field('left_column_item_2__either_heading'); ?></h2>
                     <p> <?php the_field('left_column_item_2__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('left_column_item_2__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('left_column_item_2__long_text'); ?> </p>
@@ -91,7 +91,7 @@
                     
                     <h2><?php the_field('left_column_item_3__either_heading'); ?></h2>
                     <p> <?php the_field('left_column_item_3__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('left_column_item_3__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('left_column_item_3__long_text'); ?> </p>
@@ -118,7 +118,7 @@
                     
                     <h2><?php the_field('left_column_item_4__either_heading'); ?></h2>
                     <p> <?php the_field('left_column_item_4__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('left_column_item_4__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('left_column_item_4__long_text'); ?> </p>
@@ -150,7 +150,7 @@
                     
                     <h2><?php the_field('right_column_item_1__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_1__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_1__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_1__long_text'); ?> </p>
@@ -177,7 +177,7 @@
                     
                     <h2><?php the_field('right_column_item_2__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_2__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_2__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_2__long_text'); ?> </p>
@@ -204,7 +204,7 @@
                     
                     <h2><?php the_field('right_column_item_3__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_3__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_3__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_3__long_text'); ?> </p>
@@ -231,7 +231,7 @@
                     
                     <h2><?php the_field('right_column_item_4__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_4__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_4__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_4__long_text'); ?> </p>
@@ -258,7 +258,7 @@
                     
                     <h2><?php the_field('right_column_item_5__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_5__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_5__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_5__long_text'); ?> </p>
@@ -285,7 +285,7 @@
                     
                     <h2><?php the_field('right_column_item_6__either_heading'); ?></h2>
                     <p> <?php the_field('right_column_item_6__strap_line'); ?></p>
-                    <span class="c-plus"></span>
+                    <span class="c-plus <?php the_field('right_column_item_6__extra_options'); ?>"></span>
                 </div>
                 <div class="c-category__longtext">
                     <p> <?php the_field('right_column_item_6__long_text'); ?> </p>

@@ -9,7 +9,7 @@
         <div class="video-wrapper">
             <?php $image = get_field('our_strategy_page__section_1__image');
                 if( !empty( $image ) ): ?>
-                    <img class="c-banner-1__mobile-poster" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="c-banner-1__mobile-poster m-object-fit" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             <?php endif; ?>
         </div>
 
@@ -20,7 +20,7 @@
 
         <div class="copy-wrapper">
            
-            <div class="copy-inner">
+            <div class="copy-inner m-tickerspace">
 
                 <div class="copy-wrapper__text">
                     <p>

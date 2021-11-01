@@ -65,4 +65,8 @@
       transition: 0.5s all;
     }
   }
+
+  &.hide-plus{
+    display:none;
+  }
 }

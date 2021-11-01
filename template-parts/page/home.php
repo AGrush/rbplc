@@ -70,7 +70,7 @@
         </div>
 
         <div class="text-roller-wrapper">
-                <div id="my-text-roller">
+                <div class="text-roller" id="my-text-roller">
                     <span><?php the_field('home_page__section_1__scrolling_text_marquee'); ?> &nbsp;&nbsp;&nbsp;&nbsp;</span>
                 </div>
             </div>

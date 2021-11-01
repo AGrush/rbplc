@@ -4,7 +4,7 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
     padding: 0;
 }
 p {
-    margin-bottom: $paragraph-margin-bottom;
+    // margin-bottom: $paragraph-margin-bottom;
     font-size: inherit;
     line-height: $paragraph-lineheight;
     -moz-osx-font-smoothing: grayscale;
@@ -29,7 +29,8 @@ p {
 }
 
 a {   
-    line-height: inherit;
+    font-family: SweetSans;
+    color: #1f1f1e;
     // cursor: pointer;
     // border-bottom: 1px solid;
     text-decoration: none;
