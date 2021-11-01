@@ -49,10 +49,34 @@
         <div class="copy-wrapper">
            
             <div class="copy-inner">
-                <div class="copy-wrapper__heading">
-                    <h1> 
-                        <?php the_field('our_purpose_page__section_1__heading_text'); ?>
-                    </h1>
+                <div class="copy-wrapper__heading-video">
+                    <?php
+                        // Load value.
+                        $iframe2 = get_field('our_purpose_page__section_1__heading_video');
+
+                        // Use preg_match to find iframe src.
+                        preg_match('/src="(.+?)"/', $iframe2, $matches);
+                        $src2 = $matches[1];
+
+                        // Add extra parameters to src and replcae HTML.
+                        $params2 = array(
+                            'controls'  => 0,
+                            'hd'        => 1,
+                            'autoplay'  => 1,
+                            'muted'     => 1,
+                            'autohide'  => 1,
+                            'loop'      => 1
+                        );
+                        $new_src2 = add_query_arg($params2, $src2);
+                        $iframe2 = str_replace($src2, $new_src2, $iframe2);
+
+                        // Add extra attributes to iframe HTML.
+                        $attributes2 = 'frameborder="0"';
+                        $iframe2 = str_replace('></iframe>', ' ' . $attributes2 . '></iframe>', $iframe2);
+
+                        // Display customized HTML.
+                        echo $iframe2;
+                    ?>
                 </div>
                 <div class="copy-wrapper__text">
                     

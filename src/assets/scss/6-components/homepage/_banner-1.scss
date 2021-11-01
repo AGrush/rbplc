@@ -20,6 +20,7 @@
     @media (max-width: $mobile-width){
       padding: 8px 5px 5px;
     }
+
     p{
       font-family: SweetSansBold;
       font-variant: small-caps;
@@ -158,6 +159,30 @@
         @media (max-width: $tablet-width){
           font-size: 30px;
         }
+      }
+    }
+
+    &__heading-video {
+      position: relative; 
+      padding-bottom: 16.25%;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+
+      @media (max-width: $tablet-width){
+        padding-bottom: 27.25%;
+      }
+
+      iframe{
+        position: absolute;
+        top: -10px;
+        left: -12vw;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: $tablet-width){
+        font-size: 30px;
       }
     }
 
