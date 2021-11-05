@@ -5,7 +5,6 @@ if(document.querySelector('.c-popup-disclaimer')){
 }
 
 function disclaimerSection() {
-  console.log('1')
   var cookieName = 'rbpcl-disclaimer'
 
   if (!Cookies.get(cookieName)) {

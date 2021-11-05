@@ -84,7 +84,8 @@ h1 {
     font-variant: small-caps;
     font-size: 40px;
     letter-spacing: 2px;
-
+    text-transform: lowercase;
+    
     @media (max-width: $tablet-width){
         font-size: 30px;
     }

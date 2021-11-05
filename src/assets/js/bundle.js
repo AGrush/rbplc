@@ -12,4 +12,5 @@ import './components/our-leadership'
 import './components/brighterir'
 import './components/disclaimer'
 import './components/corporate-responsibility'
+import './components/financial-calendar'
 

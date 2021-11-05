@@ -1,0 +1,161 @@
+.c-simple-page{
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__heading{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    min-height: 160px;
+    background-color: #e9c5c7;
+    // padding: 0 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: $tablet-width){
+      justify-content: flex-start;
+      margin-bottom: 5px;
+    }
+
+    h1{
+      @media (max-width: $mobile-width){
+      font-size: 30px;
+      max-width: 300px;
+      text-align: center;
+      text-transform: lowercase;
+      }
+    }
+  }
+
+  &__spwidget-wrapper {
+    position: absolute;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+
+    @media (max-width: $tablet-width){
+      height: 64px;
+      position: relative;
+      justify-content: center;
+    }
+  }
+
+  &__brighterir-spwidget {
+    width: 540px;
+    transform: scale(0.8);
+    margin: 0 auto;
+    position: absolute;
+    border: none;
+    top: 0;
+    right: -20px;
+
+    @media (max-width: 1300px){
+      right: initial;
+    }
+  }
+
+  &__body{
+    max-width: 1000px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    font-size: inherit;
+    line-height: $paragraph-lineheight;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.44px;
+    padding: 30px 20px 50px;
+
+    &.m-centered{
+      text-align: center;
+      
+      @media (max-width: $mobile-width){
+        text-align: left;
+      }
+    }
+
+
+    @media (max-width: $tablet-width){
+        font-size: 11px;
+        line-height: 1.1;
+        max-width: 600px;
+    }
+
+    @media (max-width: $mobile-width){
+        font-size: 13px;
+        line-height: 1.23;
+        letter-spacing: 0.36px;
+    }
+
+    h2{
+      display: inline-block;
+      font-family: SweetSans;
+      font-variant: small-caps;
+      text-transform: lowercase;
+      font-size: 16px;
+      line-height: 1.31;
+      letter-spacing: 0.44px;
+      background-color: #1f1f1e;
+      padding: 4px 10px;
+      color: #fff;
+      width: auto;
+
+
+      @media (max-width: $tablet-width){
+        font-size: 13px;
+        line-height: 1.1;
+      }
+
+      @media (max-width: $mobile-width){
+          font-size: 16px;
+          line-height: 1.23;
+          letter-spacing: 0.36px;
+          max-width: 300px;
+      }
+    }
+  }
+
+  &__widget{
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    border: none; 
+    overflow: hidden;
+
+    @media (max-width: $mobile-width){
+      padding: 10px;
+      width: 95%;
+    }
+  }
+
+
+  &__brighterir-spinfo {
+    width: 90%;
+    margin: 20px auto 10px;
+    border: none; 
+    overflow: hidden;
+
+    @media (max-width: $mobile-width){
+      width: 100%;
+      margin: 0px auto 10px;
+    }
+  }
+
+  &__brighterir-emailalerts {
+    width: 50%;
+    margin: 20px auto 10px;
+    border: none; 
+    overflow: hidden;
+
+    @media (max-width: $mobile-width){
+      width: 100%;
+      margin: 10px auto 10px;
+    }
+  }
+}
+

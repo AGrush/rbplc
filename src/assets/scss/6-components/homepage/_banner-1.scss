@@ -123,7 +123,7 @@
       position: relative;
 
       @media (max-width: $tablet-width){
-        padding-left: 60px;
+        padding-left: 40px;
         padding-bottom: 30px;
       }
       &.m-tickerspace{
@@ -132,6 +132,7 @@
           padding-bottom: 60px;
         }
       }
+
       @media (max-width: $mobile-width){
         padding-left: initial;
         max-width: 320px;
@@ -190,6 +191,22 @@
       max-width: 360px;
       padding-right: 40px;
       margin-bottom: 10px;
+
+      &.m-extra-space-above{
+        margin-top: 110px;
+
+        @media (max-width: $mobile-width){
+          margin-top: 10px;
+        }
+      }
+
+      &.m-extra-width{
+        max-width: 700px;
+        margin-bottom: 30px;
+        @media (max-width: $tablet-width){
+          margin-bottom: 10px;
+        }
+      }
 
       &.m-bold{
         font-weight: bold;
