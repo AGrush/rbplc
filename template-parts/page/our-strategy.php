@@ -34,9 +34,6 @@
                     <a href="<?php the_field('our_strategy_page__section_1__link2__url');?>" class="c-button-1">
                         <?php the_field('our_strategy_page__section_1__link2__text');?>
                     </a>
-                    <a href="<?php the_field('our_strategy_page__section_1__link3__url');?>" class="c-button-1">
-                        <?php the_field('our_strategy_page__section_1__link3__text');?>
-                    </a>
                 </div>
             </div>
         </div>

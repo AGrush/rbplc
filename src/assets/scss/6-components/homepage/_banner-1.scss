@@ -118,6 +118,7 @@
       padding: 20px 30px 40px;
       min-height: 300px;
     }
+
     .copy-inner{
       padding-left: 80px;
       position: relative;
@@ -142,8 +143,19 @@
 
       .button-wrapper{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+
+        a{
+          margin-right: 20px;
+          @media (max-width: $tablet-width){
+            margin-right: initial;
+          }
+        }
+
+        @media (max-width: $tablet-width){
+          flex-direction: column;
+        }
       }
 
       .c-button-1{
@@ -157,8 +169,14 @@
     &__heading {
       max-width: 360px;    
       h1{
+
+        font-size: 50px;
         @media (max-width: $tablet-width){
           font-size: 30px;
+        }
+
+        @media (max-width: $mobile-width){
+          font-size: 36px;
         }
       }
     }
@@ -188,9 +206,16 @@
     }
 
     &__text{
-      max-width: 360px;
+      max-width: 420px;
       padding-right: 40px;
       margin-bottom: 10px;
+      @media (max-width: $tablet-width){
+        max-width: 300px;
+
+      }
+      @media (max-width: $mobile-width){
+        max-width: 270px;
+      }
 
       &.m-extra-space-above{
         margin-top: 110px;
@@ -210,16 +235,6 @@
 
       &.m-bold{
         font-weight: bold;
-      }
-
-
-      @media (max-width: $tablet-width){
-        max-width: 330px;
-
-      }
-
-      @media (max-width: $mobile-width){
-        max-width: 270px;
       }
     }
 
@@ -276,7 +291,15 @@
         flex-direction: column;
         width: 100%;
         padding: 30px 30px 40px;
+
+        &.m-justify-start{
+          justify-content: flex-start;
+          min-height: 250px;
+        }
       }
+
+
+    
       .copy-inner{
         padding-left: 80px;
         position: relative;
@@ -352,5 +375,3 @@
 
 
 }
-
-

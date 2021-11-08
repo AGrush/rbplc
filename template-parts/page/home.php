@@ -70,10 +70,10 @@
         </div>
 
         <div class="text-roller-wrapper">
-                <div class="text-roller" id="my-text-roller">
-                    <span><?php the_field('home_page__section_1__scrolling_text_marquee'); ?> &nbsp;&nbsp;&nbsp;&nbsp;</span>
-                </div>
+            <div class="text-roller" id="my-text-roller">
+                <span><?php the_field('home_page__section_1__scrolling_text_marquee'); ?> &nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
+        </div>
         <?php $image = get_field('home_section1_small_image');
         if( !empty( $image ) ): ?>
             <img class="c-banner-1__small-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
@@ -85,23 +85,22 @@
         <div class="top-wrapper">
             <h1>   <?php the_field('home_page__section_2__title'); ?>   </h1>
             <p>    <?php the_field('home_page__section_2__body'); ?>    </p>
-            <p>    <?php the_field('home_page__section_2__body2'); ?>    </p>
         </div>
         <div class="bottom-wrapper" data-id="io1">
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat1" class="decimal"><?php the_field('home_page__section_2__stat1__number'); ?></p><span><?php the_field('home_page__section_2__stat1__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat1" class="<?php the_field('home_page__section_2__stat1__extra_classes'); ?>"><?php the_field('home_page__section_2__stat1__number'); ?></p><span><?php the_field('home_page__section_2__stat1__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat1__text'); ?></p>
             </div>
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat2"><?php the_field('home_page__section_2__stat2__number'); ?></p><span><?php the_field('home_page__section_2__stat2__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat2" class="<?php the_field('home_page__section_2__stat2__extra_classes'); ?>"><?php the_field('home_page__section_2__stat2__number'); ?></p><span><?php the_field('home_page__section_2__stat2__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat2__text'); ?></p>
             </div>
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat3"><?php the_field('home_page__section_2__stat3__number'); ?></p><span><?php the_field('home_page__section_2__stat3__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat3" class="<?php the_field('home_page__section_2__stat3__extra_classes'); ?>"><?php the_field('home_page__section_2__stat3__number'); ?></p><span><?php the_field('home_page__section_2__stat3__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat3__text'); ?></p>
             </div>
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat4"><?php the_field('home_page__section_2__stat4__number'); ?></p><span><?php the_field('home_page__section_2__stat4__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p id="hp-stat4" class="<?php the_field('home_page__section_2__stat4__extra_classes'); ?>"><?php the_field('home_page__section_2__stat4__number'); ?></p><span><?php the_field('home_page__section_2__stat4__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat4__text'); ?></p>
             </div>
         </div>
@@ -139,6 +138,11 @@
         </div>
         
         <div class="c-links__wrapper-video">
+            <?php $image2HpPoster = get_field('home_page__section_3__square_video_poster');
+                if( !empty( $image2HpPoster ) ): ?>
+                    <img class="c-links__video-poster" src="<?php echo esc_url($image2HpPoster['url']); ?>" alt="<?php echo esc_attr($image2HpPoster['alt']); ?>" />
+            <?php endif; ?>
+
             <div class="iframe-wrapper">
                 <?php
                     // Load value.

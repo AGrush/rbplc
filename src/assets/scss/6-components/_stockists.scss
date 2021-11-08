@@ -1,0 +1,68 @@
+.c-stockists{
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1f1f1e;
+
+  @media (max-width: $tablet-width){
+    min-height: 550px;
+  }
+
+  &__heading{
+    padding: 60px 0 40px;
+    @media (max-width: $mobile-width){
+      padding: 50px 0 30px;
+    }
+    
+    h2{
+      font-size: 60px;
+      color: #e9c5c7;
+      font-variant: small-caps;
+      font-family: SweetSans;
+      text-transform: lowercase;
+
+      @media (max-width: $tablet-width){
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    padding-bottom: 60px;
+
+    @media (max-width: $tablet-width){
+      max-width: 600px;
+    }
+  }
+
+  &__img-wrapper{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 40px;
+
+
+    @media (max-width: $tablet-width){
+      margin: 20px;
+    }
+
+    @media (max-width: $mobile-width){
+      max-width: 110px;
+    }
+  }
+
+  &__img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    align-self: center;
+  }
+}

@@ -1,8 +1,8 @@
 .c-tiktok{
-  background-color: #e9c5c7;
+  background-color: #fff;
   padding: 20px 30px;
   min-height: 600px;
-
+  
   @media (max-width: $mobile-width){
 
     min-height: 400px;
@@ -15,7 +15,6 @@
     top: -20px;
     position: relative;
     display: block;
-    background: #e9c5c7;
     padding: 0 60px;
   }
 }

@@ -99,7 +99,7 @@
             ?>
         </div>
 
-        <div class="copy-wrapper" data-id="observedArea">
+        <div class="copy-wrapper m-justify-start" data-id="observedArea">
             <div class="copy-inner">
                 <div class="copy-wrapper__text">
                     <p>
@@ -139,17 +139,23 @@
         </div>
 
         <div class="some-links">
-            <a href="<?php the_field('about_us_page__section_2__link1__url');?>" class="c-button-1 m-white-text">
-                <?php the_field('about_us_page__section_2__link1__text');?>
-            </a>
+            <?php $link1 = get_field('about_us_page__section_2__link1__text'); if( !empty( $link1 ) ): ?>
+                <a href="<?php the_field('about_us_page__section_2__link1__url');?>" class="c-button-1 m-white-text">
+                    <?php the_field('about_us_page__section_2__link1__text');?>
+                </a>
+            <?php endif; ?>
 
-            <a href="<?php the_field('about_us_page__section_2__link2__url');?>" class="c-button-1 m-white-text">
-                <?php the_field('about_us_page__section_2__link2__text');?>
-            </a>
+            <?php $link2 = get_field('about_us_page__section_2__link2__text'); if( !empty( $link2 ) ): ?>
+                <a href="<?php the_field('about_us_page__section_2__link2__url');?>" class="c-button-1 m-white-text">
+                    <?php the_field('about_us_page__section_2__link2__text');?>
+                </a>
+            <?php endif; ?>
 
-            <a href="<?php the_field('about_us_page__section_2__link3__url');?>" class="c-button-1 m-white-text">
-                <?php the_field('about_us_page__section_2__link3__text');?>
-            </a>
+            <?php $link3 = get_field('about_us_page__section_2__link3__text'); if( !empty( $link3 ) ): ?>
+                <a href="<?php the_field('about_us_page__section_2__link3__url');?>" class="c-button-1 m-white-text">
+                    <?php the_field('about_us_page__section_2__link3__text');?>
+                </a>
+            <?php endif; ?>
         </div>
 
     </div>
@@ -159,10 +165,14 @@
             <p class="h-hide-s"><?php the_field('about_us_page__section_3__desktop_only_text'); ?></p>
            
             <p><?php the_field('about_us_page__section_3__desktop_and_mobile_text'); ?></p>
-
         </div>
         
         <div class="c-text-image-banner__wrapper-video">
+            <?php $image2auPoster = get_field('about_us_page__section_3__video_poster');
+                if( !empty( $image2auPoster ) ): ?>
+                    <img class="c-links__video-poster" src="<?php echo esc_url($image2auPoster['url']); ?>" alt="<?php echo esc_attr($image2auPoster['alt']); ?>" />
+            <?php endif; ?>
+
             <div class="iframe-wrapper">
                 <?php
                     // Load value.
@@ -194,6 +204,154 @@
             </div>
         </div>  
     </div>
+
+    <div class="c-stockists">
+        <div class="c-stockists__heading">
+            <h2>Stockists</h2>
+        </div>
+        <div class="c-stockists__wrapper">
+            <?php $stockist_img_1 = get_field('about_us_page__section_4__stockist_img_1'); if(!empty($stockist_img_1)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_1['url']); ?>" alt="<?php echo esc_attr($stockist_img_1['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_2 = get_field('about_us_page__section_4__stockist_img_2'); if(!empty($stockist_img_2)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_2['url']); ?>" alt="<?php echo esc_attr($stockist_img_2['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_3 = get_field('about_us_page__section_4__stockist_img_3'); if(!empty($stockist_img_3)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_3['url']); ?>" alt="<?php echo esc_attr($stockist_img_3['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_4 = get_field('about_us_page__section_4__stockist_img_4'); if(!empty($stockist_img_4)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_4['url']); ?>" alt="<?php echo esc_attr($stockist_img_4['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_5 = get_field('about_us_page__section_4__stockist_img_5'); if(!empty($stockist_img_5)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_5['url']); ?>" alt="<?php echo esc_attr($stockist_img_5['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_6 = get_field('about_us_page__section_4__stockist_img_6'); if(!empty($stockist_img_6)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_6['url']); ?>" alt="<?php echo esc_attr($stockist_img_6['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_7 = get_field('about_us_page__section_4__stockist_img_7'); if(!empty($stockist_img_7)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_7['url']); ?>" alt="<?php echo esc_attr($stockist_img_7['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_8 = get_field('about_us_page__section_4__stockist_img_8'); if(!empty($stockist_img_8)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_8['url']); ?>" alt="<?php echo esc_attr($stockist_img_8['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            
+            <?php $stockist_img_9 = get_field('about_us_page__section_4__stockist_img_9'); if(!empty($stockist_img_9)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_9['url']); ?>" alt="<?php echo esc_attr($stockist_img_9['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_10 = get_field('about_us_page__section_4__stockist_img_10'); if(!empty($stockist_img_10)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_10['url']); ?>" alt="<?php echo esc_attr($stockist_img_10['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_11 = get_field('about_us_page__section_4__stockist_img_11'); if(!empty($stockist_img_11)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_11['url']); ?>" alt="<?php echo esc_attr($stockist_img_11['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_12 = get_field('about_us_page__section_4__stockist_img_12'); if(!empty($stockist_img_12)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_12['url']); ?>" alt="<?php echo esc_attr($stockist_img_12['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_13 = get_field('about_us_page__section_4__stockist_img_13'); if(!empty($stockist_img_13)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_13['url']); ?>" alt="<?php echo esc_attr($stockist_img_13['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_14 = get_field('about_us_page__section_4__stockist_img_14'); if(!empty($stockist_img_14)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_14['url']); ?>" alt="<?php echo esc_attr($stockist_img_14['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_15 = get_field('about_us_page__section_4__stockist_img_15'); if(!empty($stockist_img_15)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_15['url']); ?>" alt="<?php echo esc_attr($stockist_img_15['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+            <?php $stockist_img_16 = get_field('about_us_page__section_4__stockist_img_16'); if(!empty($stockist_img_16)): ?>
+                <div class="c-stockists__img-wrapper">
+                    <img class="c-stockists__img" src="<?php echo esc_url($stockist_img_16['url']); ?>" alt="<?php echo esc_attr($stockist_img_16['alt']); ?>" />
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+
+    <div class="c-we-fight">
+        <div class="c-we-fight__video-wrapper">
+            <?php
+                // Load value.
+                $iframe = get_field('about_us_page__section_5__heading_video');
+
+                // Use preg_match to find iframe src.
+                preg_match('/src="(.+?)"/', $iframe, $matches);
+                $src = $matches[1];
+
+                // Add extra parameters to src and replcae HTML.
+                $params = array(
+                    'controls'  => 0,
+                    'hd'        => 1,
+                    'autoplay'  => 1,
+                    'muted'     => 1,
+                    'autohide'  => 1,
+                    'loop'      => 1
+                );
+                $new_src = add_query_arg($params, $src);
+                $iframe = str_replace($src, $new_src, $iframe);
+
+                // Add extra attributes to iframe HTML.
+                $attributes = 'frameborder="0"';
+                $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+                // Display customized HTML.
+                echo $iframe;
+            ?>
+        </div>
+
+        <div class="c-we-fight__body-copy">
+            <p><?php the_field('about_us_page__section_5__body_copy'); ?></p>
+        </div>
+
+        <div class="c-tiktok">
+            <div data-mc-src="c0fc088c-0f30-4245-95b4-ec3cb4385752#tiktok"></div>
+            
+            <?php $image = get_field('about_us_page__section_5__below_tiktok_img');
+            if( !empty( $image ) ): ?>
+                <img class="c-tiktok__follow-us-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+            <?php endif; ?>
+                    
+            <script 
+                src="https://cdn2.woxo.tech/a.js#60a3f2bc84b1cc0015c83ed7" 
+                async data-usrc>
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
     </div>
 </div>

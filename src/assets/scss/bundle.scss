@@ -44,10 +44,11 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './6-components/homepage/links';
 @import './6-components/homepage/tickertape';
 
-@import './6-components/our-purpose/tiktok';
-@import './6-components/our-purpose/text-image-banner';
+@import './6-components/tiktok';
+@import './6-components/text-image-banner';
 
 @import './6-components/our-leadership/our-leadership';
+@import './6-components/our-leadership/our-leadership-all';
 
 @import './6-components/categories/c-categories';
 @import './6-components/categories/c-category';
@@ -61,6 +62,10 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import './6-components/simple-page';
 
 @import './6-components/tables';
+
+@import './6-components/stockists';
+
+@import './6-components/we-fight';
 
 //Utility
 @import './7-utility/helpers';

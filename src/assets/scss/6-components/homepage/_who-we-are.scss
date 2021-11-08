@@ -38,22 +38,28 @@
     @media (max-width: $mobile-width){
       flex-direction: column;
       text-align: left;
-      padding: 20px 0;
+      padding: 20px 0 40px;
     }
 
     .stat-wrapper{
       display: flex;
       flex-direction: column;
-      padding: 0 35px;
-      max-width: 270px;
+      padding: 0 15px;
+      max-width: 390px;
+      align-items: center;
+      
       @media (max-width: $tablet-width){
-        padding: 0 10px 0 0;
+        padding: 0 20px 0 0;
+      }
+
+      @media (max-width: $mobile-width){
+        align-items: flex-start;
       }
 
       &__number{
         color:#e9c5c7;
         p{
-          font-size: 120px;
+          font-size: 100px;
           font-family: SweetSansBold;
           display: inline;
           @media (max-width: $tablet-width){
@@ -63,8 +69,15 @@
       } 
 
       &__text{
+        text-transform: lowercase;
+        font-family: SweetSansBold;
         font-variant: small-caps;
         font-size: 14px;
+        max-width: 180px;
+
+        @media (max-width: $tablet-width){
+          max-width: 180px;
+        }
       } 
     }
   }

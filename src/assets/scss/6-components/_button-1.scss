@@ -17,6 +17,11 @@
     font-size: 12px;
   }
 
+  @media (max-width: $mobile-width){
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+
   &:hover{
     color: #fff;
     background-color: #000;

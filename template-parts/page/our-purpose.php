@@ -103,7 +103,7 @@
         <div data-mc-src="c0fc088c-0f30-4245-95b4-ec3cb4385752#tiktok"></div>
           
 
-        <?php $image = get_field('our_purpose__section_2__below_tiktok_img');
+        <?php $image = get_field('our_purpose_page__section_2__below_tiktok_img');
         if( !empty( $image ) ): ?>
             <img class="c-tiktok__follow-us-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
         <?php endif; ?>
