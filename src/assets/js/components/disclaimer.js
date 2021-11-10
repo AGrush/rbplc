@@ -5,7 +5,7 @@ if(document.querySelector('.c-popup-disclaimer')){
 }
 
 function disclaimerSection() {
-  var cookieName = 'rbpcl-disclaimer'
+  var cookieName = 'rbplc-disclaimer'
 
   if (!Cookies.get(cookieName)) {
     console.log('2')
@@ -17,7 +17,7 @@ function disclaimerSection() {
       Cookies.set(
         cookieName
         , '1'
-        , { expires: 99999 }
+        , { expires: 7 }
       );
 
       disclaimerPopup.classList.add('h-hidden')
