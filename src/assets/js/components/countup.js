@@ -45,13 +45,14 @@ if(hpStat4){
   }
 }
 
+
 //init counters
 let countUpOptions1 = {
   startVal: 0,
   decimalPlaces: stat1Decimal,
   easingFn: slowEase
 }
-const countUpStat1 = new CountUp('hp-stat1', hpStat1countUp, countUpOptions1);
+let countUpStat1 = new CountUp('hp-stat1', hpStat1countUp, countUpOptions1);
 
 let countUpOptions2 = {
   startVal: 0,
@@ -104,13 +105,21 @@ function startObservingCountUpIntersection (){
 
 function startCountingUp () {
   //only load on page where countUp exists
-  if(hpStat1){
+  if(hpStat4 || hpStat3 || hpStat2 || hpStat1){
     //only load if no errors in countUp
-    if (!countUpStat1.error) {
-      countUpStat1.start();
+    if (!countUpStat1.error || !countUpStat2.error || !countUpStat3.error || !countUpStat4.error) {
+      if(hpStat1){
+        countUpStat1.start();
+      }
+      if(hpStat2){
       countUpStat2.start();
+      }
+      if(hpStat3){
       countUpStat3.start();
+      }
+      if(hpStat4){
       countUpStat4.start();
+      }
     } else {
       console.error(countUpStat1.error);
     }

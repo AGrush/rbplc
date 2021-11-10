@@ -87,22 +87,30 @@
             <p>    <?php the_field('home_page__section_2__body'); ?>    </p>
         </div>
         <div class="bottom-wrapper" data-id="io1">
+            <?php $stat1 = get_field('home_page__section_2__stat1__number'); if( !empty( $stat1 ) ): ?>
             <div class="stat-wrapper">
                 <span class="stat-wrapper__number"><p id="hp-stat1" class="<?php the_field('home_page__section_2__stat1__extra_classes'); ?>"><?php the_field('home_page__section_2__stat1__number'); ?></p><span><?php the_field('home_page__section_2__stat1__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat1__text'); ?></p>
             </div>
+            <?php endif; ?>
+            <?php $stat2 = get_field('home_page__section_2__stat2__number'); if( !empty( $stat2 ) ): ?>
             <div class="stat-wrapper">
-                <span class="stat-wrapper__number"><p id="hp-stat2" class="<?php the_field('home_page__section_2__stat2__extra_classes'); ?>"><?php the_field('home_page__section_2__stat2__number'); ?></p><span><?php the_field('home_page__section_2__stat2__unit'); ?></span></span>
+                <span class="stat-wrapper__number"><p>£</p><p id="hp-stat2" class="<?php the_field('home_page__section_2__stat2__extra_classes'); ?>"><?php the_field('home_page__section_2__stat2__number'); ?></p><span><?php the_field('home_page__section_2__stat2__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat2__text'); ?></p>
             </div>
+            <?php endif; ?>
+            <?php $stat3 = get_field('home_page__section_2__stat3__number'); if( !empty( $stat3 ) ): ?>
             <div class="stat-wrapper">
                 <span class="stat-wrapper__number"><p id="hp-stat3" class="<?php the_field('home_page__section_2__stat3__extra_classes'); ?>"><?php the_field('home_page__section_2__stat3__number'); ?></p><span><?php the_field('home_page__section_2__stat3__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat3__text'); ?></p>
             </div>
+            <?php endif; ?>
+            <?php $stat4 = get_field('home_page__section_2__stat4__number'); if( !empty( $stat4 ) ): ?>
             <div class="stat-wrapper">
                 <span class="stat-wrapper__number"><p id="hp-stat4" class="<?php the_field('home_page__section_2__stat4__extra_classes'); ?>"><?php the_field('home_page__section_2__stat4__number'); ?></p><span><?php the_field('home_page__section_2__stat4__unit'); ?></span></span>
                 <p class="stat-wrapper__text"><?php the_field('home_page__section_2__stat4__text'); ?></p>
             </div>
+            <?php endif; ?>
         </div>
     </div>
        
