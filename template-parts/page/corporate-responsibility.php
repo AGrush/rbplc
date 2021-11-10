@@ -6,10 +6,37 @@
     </div>
     
     <div class="video-wrapper">
-        <?php $image = get_field('corporate_responsibility__section_1__image');
-            if( !empty( $image ) ): ?>
-                <img class="c-banner-1__mobile-poster m-object-fit" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+        <?php $imageCRPoster = get_field('corporate_responsibility__section_1__video_poster');
+            if( !empty( $imageCRPoster ) ): ?>
+                <img class="c-banner-1__mobile-poster" src="<?php echo esc_url($imageCRPoster['url']); ?>" alt="<?php echo esc_attr($imageHpPoster['alt']); ?>" />
         <?php endif; ?>
+        <?php
+            // Load value.
+            $iframe = get_field('corporate_responsibility__section_1__video');
+
+            // Use preg_match to find iframe src.
+            preg_match('/src="(.+?)"/', $iframe, $matches);
+            $src = $matches[1];
+
+            // Add extra parameters to src and replcae HTML.
+            $params = array(
+                'controls'  => 0,
+                'hd'        => 1,
+                'autoplay'  => 1,
+                'muted'      => 1,
+                'autohide'  => 1,
+                'loop'      => 1
+            );
+            $new_src = add_query_arg($params, $src);
+            $iframe = str_replace($src, $new_src, $iframe);
+
+            // Add extra attributes to iframe HTML.
+            $attributes = 'frameborder="0"';
+            $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+            // Display customized HTML.
+            echo $iframe;
+        ?>
     </div>
 
     <!-- <div class="box">

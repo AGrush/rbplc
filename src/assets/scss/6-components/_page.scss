@@ -3,6 +3,19 @@
     // min-height: 100vh;
     // padding: rem-calc(20);
     overflow: hidden;
+    min-height: 300px;
+
+    &.m-centered{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            padding: 40px;
+            text-align: center;
+            max-width: 306px;
+        }
+    }
 
     &__header {
         margin-bottom: rem-calc(20);

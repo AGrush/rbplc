@@ -93,10 +93,6 @@
                 </div>
             </div>
 
-            <?php $image = get_field('rr_page__section_1__small_image');
-            if( !empty( $image ) ): ?>
-                <img class="c-banner-1__small-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            <?php endif; ?>
 
         </div>
 

@@ -112,6 +112,7 @@
       width: auto;
 
 
+
       @media (max-width: $tablet-width){
         font-size: 13px;
         line-height: 1.1;
@@ -122,6 +123,17 @@
           line-height: 1.23;
           letter-spacing: 0.36px;
           max-width: 300px;
+      }
+    }
+
+    &.m-wp{
+
+      h2{
+      margin-bottom: 6px;
+      }
+
+      p{
+        margin-bottom: 20px;
       }
     }
   }
