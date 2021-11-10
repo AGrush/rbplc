@@ -22,7 +22,7 @@
            
             <div class="copy-inner m-tickerspace">
 
-                <div class="copy-wrapper__text">
+                <div class="copy-wrapper__text m-our-strategy">
                     <p>
                         <?php the_field('our_strategy_page__section_1__text'); ?>
                     </p> 

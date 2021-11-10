@@ -114,10 +114,19 @@
         line-height: 1.07;
         letter-spacing: 0.39px;
 
+        @media (max-width: $tablet-width){
+          font-size: 10px;
+          width: 83px;
+        }
+
         @media (max-width: $mobile-width){
-          margin: 0 2px;
-          max-width: 90px;
           font-size: 12px;
+          margin: 0 2px;
+          width: 100px;
+        }
+
+        @media (max-width: 359px){
+          width: 90px;
         }
       }
     }

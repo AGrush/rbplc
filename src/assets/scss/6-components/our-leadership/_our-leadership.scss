@@ -1,6 +1,14 @@
 .c-our-leadership{
   position: relative;
 
+  @media (max-width: $tablet-width){
+    min-width: 372px;
+  }
+
+  @media (max-width: $mobile-width){
+   min-width: initial;
+  }
+
   &.m-full-width{
     display: flex;
     width: 100%;
@@ -114,6 +122,8 @@
         font-size: 14px;
         line-height: 1.07;
         letter-spacing: 0.39px;
+        max-width: 130px;
+        
         @media (max-width: $tablet-width){
           font-size: 10px;
           width: 83px;
@@ -122,6 +132,11 @@
         @media (max-width: $mobile-width){
           font-size: 12px;
           margin: 0 2px;
+          width: 111px;
+        }
+
+        @media (max-width: 359px){
+          width: 90px;
         }
       }
     }

@@ -4,6 +4,12 @@
 			display: none !important;
 		}
 	}
+
+	&-ipad{
+		@media (min-width: 768px) and (max-width: 840px){
+			display: none !important;
+		}
+	}
 }
 
 .h-show_only {

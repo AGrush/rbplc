@@ -64,5 +64,10 @@
     max-width: 150px;
     height: auto;
     align-self: center;
+    max-height: 70px;
+
+    @media (max-width: $tablet-width){
+      max-height: 40px;
+    }
   }
 }

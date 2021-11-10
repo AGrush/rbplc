@@ -9,6 +9,11 @@
     iframe{
       width: 100%;
       max-width: 600px;
+
+
+    @media (max-width: $tablet-width){
+      max-width: 300px;
+    }
     }
   }
 

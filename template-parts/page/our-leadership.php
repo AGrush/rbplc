@@ -1,11 +1,11 @@
 <div <?php post_class('c-page'); ?>>
 
     <div class="c-banner-1">
-        <div class="c-banner-1__page-title">
+        <div class="c-banner-1__page-title h-hide-ipad">
             <p><?php the_field('our_leadership_page__section_1__page_title'); ?></p>
         </div>
         
-        <div class="video-wrapper">
+        <div class="video-wrapper m-our-leadership">
             <?php $image = get_field('our_leadership_page__section_1__image');
                 if( !empty( $image ) ): ?>
                     <img class="c-banner-1__mobile-poster m-object-fit" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />

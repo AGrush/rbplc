@@ -16,6 +16,19 @@
     padding: 10px 6px 6px;
     pointer-events: none;
 
+    /* Safari hack */
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) {
+        padding: 10px 0 6px!important;
+        width: 30px;
+        display: flex;
+        pointer-events: none;
+        align-items: center;
+      }
+    }
+
+    
+
     
     @media (max-width: $mobile-width){
       padding: 8px 5px 5px;
@@ -46,6 +59,12 @@
     width: 50%;
     z-index: 1;
     background: #fff;
+
+    &.m-our-leadership{
+      @media (max-width: $tablet-width){
+        width: 100%;
+      }
+    }
 
     @media (max-width: $mobile-width){
       position: relative; 
@@ -150,6 +169,7 @@
           margin-right: 20px;
           @media (max-width: $tablet-width){
             margin-right: initial;
+            margin-bottom: 5px;
           }
         }
 
@@ -209,6 +229,12 @@
       max-width: 420px;
       padding-right: 40px;
       margin-bottom: 10px;
+
+      &.m-our-strategy{
+        max-width: 570px;
+        margin-bottom: 30px;
+      }
+      
       @media (max-width: $tablet-width){
         max-width: 300px;
 
