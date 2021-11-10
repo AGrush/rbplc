@@ -13,6 +13,20 @@
 		}
 	}
 
+	&-tablet {
+		@media (max-width: $mobile-width){
+			display: none !important;
+		}
+		@media (min-width: $tablet-width + 1){
+			display: none !important;
+		}
+	}
+
+	&-desktop {
+		@media (max-width: $tablet-width){
+			display: none !important;
+		}
+	}
 }
 
 .h-no_events {

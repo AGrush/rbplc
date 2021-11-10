@@ -11,7 +11,8 @@ function ourLeadershipSection1(){
   //logic for lcicking on images
   leaderImgs.forEach(leaderImg => {
     leaderImg.addEventListener('click', (e) => {
-      
+      let imgDataIdNumber = leaderImg.getAttribute('data-id').replace(/[^0-9]/g,'')
+
       //change selected img & text
       if(!leaderImg.classList.contains('show')){
 
@@ -36,12 +37,24 @@ function ourLeadershipSection1(){
         leaderTexts.forEach(txt=>{
           //get numbers from data-id values
           let txtDataIdNumber = txt.getAttribute('data-id').replace(/[^0-9]/g,'')
-          let imgDataIdNumber = leaderImg.getAttribute('data-id').replace(/[^0-9]/g,'')
+
           
           if(txtDataIdNumber == imgDataIdNumber){
             txt.classList.add('show')
           }
+
+          //hide all the short info in that row
+          if (txtDataIdNumber <= 4){
+            document.querySelectorAll('.bod14').forEach(el=>{el.style.display = "none"})
+            document.querySelectorAll('.bod58').forEach(el=>{el.style.display = "initial"})
+          } 
         })
+
+
+        if (imgDataIdNumber >= 5 && imgDataIdNumber <= 8) {
+          document.querySelectorAll('.bod58').forEach(el=>{el.style.display = "none"})
+          document.querySelectorAll('.bod14').forEach(el=>{el.style.display = "initial"})
+        }
       } 
       
     })
@@ -52,7 +65,7 @@ function ourLeadershipSection1(){
     closeBtn.addEventListener('click', (e) => {
 
       //get the number of current txt element
-      selectedTxtDataIdNumber = e.target.parentElement.getAttribute('data-id').replace(/[^0-9]/g,'')
+      let selectedTxtDataIdNumber = e.target.parentElement.getAttribute('data-id').replace(/[^0-9]/g,'')
       
       //unselect the current text section
       e.target.parentElement.classList.remove('show')
@@ -62,10 +75,6 @@ function ourLeadershipSection1(){
     })
 
   })
-
-
-
-
 }
 
 function ourLeadershipSection2(){
@@ -117,18 +126,14 @@ function ourLeadershipSection2(){
     closeBtn.addEventListener('click', (e) => {
 
       //get the number of current txt element
-      selectedTxtDataIdNumber = e.target.parentElement.getAttribute('data-id').replace(/[^0-9]/g,'')
+      let selectedTxtDataIdNumber = e.target.parentElement.getAttribute('data-id').replace(/[^0-9]/g,'')
       
       //unselect the current text section
       e.target.parentElement.classList.remove('show')
 
       //unselet the current image
-      document.querySelector(`[data-id=leaderimg${selectedTxtDataIdNumber}]`).classList.remove('show')
+      document.querySelector(`[data-id=leaderbelowimg${selectedTxtDataIdNumber}]`).classList.remove('show')
     })
 
   })
-
-
-
-
 }
