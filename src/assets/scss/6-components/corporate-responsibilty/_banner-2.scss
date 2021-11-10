@@ -2,6 +2,15 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  margin-top: 80px;
+
+  @media (max-width: $tablet-width){
+    margin-top: 50px;
+  }
+
+  @media (max-width: $mobile-width){
+    margin-top: 0px;
+  }
 
   &__page-title{
     position: absolute;
@@ -17,7 +26,17 @@
     padding: 10px 6px 6px;
     pointer-events: none;
 
-    
+    /* Safari hack */
+    @media not all and (min-resolution:.001dpcm) { 
+      @supports (-webkit-appearance:none) {
+        padding: 10px 0 6px!important;
+        width: 30px;
+        display: flex;
+        pointer-events: none;
+        align-items: center;
+      }
+    }
+
     @media (max-width: $mobile-width){
       padding: 8px 5px 5px;
     }

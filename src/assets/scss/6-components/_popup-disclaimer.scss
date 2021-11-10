@@ -20,11 +20,11 @@
     @media (max-width: $mobile-width){
       top: 120px;
       width: 320px;
-      height: 470px;
+      height: 477px;
     }
 
     @media (max-width: 350px){
-      height: 440px;
+      height: 450px;
       width: 310px;
     }
 
@@ -101,7 +101,7 @@
         color: #fff;
         border: 1px solid #fff;
         max-width: 90px;
-        min-width: 90px;
+        min-width: 75px;
 
         &.accept{
           margin-right: 10px;

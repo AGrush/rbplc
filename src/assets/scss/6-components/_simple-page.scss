@@ -29,6 +29,13 @@
       text-transform: lowercase;
       }
     }
+
+    &.m-noticker{
+      @media (max-width: $tablet-width){
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+    }
   }
 
   &__spwidget-wrapper {

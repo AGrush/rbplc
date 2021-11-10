@@ -10,12 +10,10 @@
             </div>
 
             <div class="video-wrapper">
-
                 <?php $imageHpPoster = get_field('ipo_page__section_1__main_image');
                     if( !empty( $imageHpPoster ) ): ?>
                         <img class="c-banner-1__mobile-poster m-object-fit" src="<?php echo esc_url($imageHpPoster['url']); ?>" alt="<?php echo esc_attr($imageHpPoster['alt']); ?>" />
                 <?php endif; ?>
-            
             </div>
 
             <!-- <div class="box">
@@ -24,11 +22,21 @@
             </div> -->
 
             <div class="copy-wrapper" data-id="observedArea">
-            
-            
-                <div class="copy-inner">
+                <div class="copy-inner  m-investors">
 
-                    <div class="copy-wrapper__text m-bold">
+                    <div class="copy-wrapper__text m-investors">
+                        <h1>
+                            <?php the_field('ipo_page__section_1__section_title'); ?>
+                        </h1> 
+                    </div>
+
+                    <div class="copy-wrapper__text m-investors">
+                        <p>
+                            <?php the_field('ipo_page__section_1__section_body_copy'); ?>
+                        </p> 
+                    </div>
+
+                    <div class="copy-wrapper__text m-investors m-bold">
                         <p>
                             <?php the_field('ipo_page__section_1__instructions_text'); ?>
                         </p> 
@@ -53,8 +61,8 @@
                     <a href="<?php the_field('ipo_page__section_1__link_1_address');?>" class="c-button-1">
                         <?php the_field('ipo_page__section_1__link_1_text');?>
                     </a>
+                    <br><br><br>
                 </div>
-            
             </div>
 
             <div class="brighterir-shareprice-wrapper">
@@ -62,11 +70,6 @@
                     <iframe src="https://polaris.brighterir.com/public/revolution_beauty_group/data_table/share_price_widget"></iframe>
                 </div>
             </div>
-
-            <?php $image = get_field('ipo_page__section_1__small_image');
-            if( !empty( $image ) ): ?>
-                <img class="c-banner-1__small-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            <?php endif; ?>
 
         </div>
 

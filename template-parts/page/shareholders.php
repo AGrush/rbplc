@@ -8,13 +8,11 @@
       </div>
 
       <div class="video-wrapper">
-
         <?php $imageHpPoster = get_field('shareholders_page__section_1__main_image');
                     if( !empty( $imageHpPoster ) ): ?>
         <img class="c-banner-1__mobile-poster m-object-fit" src="<?php echo esc_url($imageHpPoster['url']); ?>"
           alt="<?php echo esc_attr($imageHpPoster['alt']); ?>" />
         <?php endif; ?>
-
       </div>
 
       <!-- <div class="box">
@@ -27,10 +25,10 @@
 
         <div class="copy-inner">
 
-          <div class="copy-wrapper__text m-extra-space-above m-extra-width m-bold">
-            <p>
-              <?php the_field('shareholders_page__section_1__intro_text'); ?>
-            </p>
+          <div class="copy-wrapper__text m-extra-space-above m-shareholders">
+            <h1>
+              <?php the_field('shareholders_page__section_1__title'); ?>
+            </h1>
           </div>
         
           <div class="c-tables">
@@ -242,25 +240,6 @@
         </div>
       </div>
 
-    </div>
-
-
-    <div class="c-popup-disclaimer h-hidden">
-      <div class="disclaimer-content">
-        <p class="important">important</p>
-        <p class="disclaimer">disclaimer</p>
-        <div class="body-copy">
-          <p><?php the_field('popup_disclaimer__multiple_pages__page_title'); ?></p>
-        </div>
-        <div class="buttons">
-          <a class="c-button-1 accept">
-            accept
-          </a>
-          <a href="<?php echo home_url(); ?>" class="c-button-1 decline">
-            decline
-          </a>
-        </div>
-      </div>
     </div>
 
 

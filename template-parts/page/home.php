@@ -1,5 +1,3 @@
-
-
 <div <?php post_class('c-page'); ?>>
     <div class="c-page__content">
 
