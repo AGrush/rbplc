@@ -1610,7 +1610,7 @@
             </div>
        
         </div>
-        <span class="mob-fix">
+        <span class="mob-fix h-show_only-s">
               
         </span>
 
