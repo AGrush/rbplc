@@ -51,16 +51,15 @@
 
 
     @media (max-width: $tablet-width){
-      margin: 20px;
+      margin: 20px 40px;
     }
 
     @media (max-width: $mobile-width){
-      max-width: 110px;
+      max-width: 95px;
     }
   }
 
   &__img{
-    width: 100%;
     max-width: 150px;
     height: auto;
     align-self: center;
@@ -68,6 +67,11 @@
 
     @media (max-width: $tablet-width){
       max-height: 40px;
+    }
+
+    @media (max-width: $mobile-width){
+      max-height: 50px;
+      max-width: 118px;
     }
   }
 }

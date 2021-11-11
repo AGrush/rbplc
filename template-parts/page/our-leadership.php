@@ -1524,7 +1524,7 @@
     <div class="c-departments-wrapper">
         <h2><?php the_field('our_leadership_page__section_3__departments_title'); ?></h2>
         <div class="arrow-container h-show_only-s">
-        <span class="chevron left"></span><span class="chevron right"></span>
+            <span class="chevron left"></span><span class="chevron right"></span>
         </div>
         <div class="c-departments">
             <div class="c-departments__department">
@@ -1608,7 +1608,12 @@
                 </div>
                 <?php the_field('our_leadership_page__section_3__department_9'); ?>
             </div>
+       
         </div>
+        <span class="mob-fix">
+              
+        </span>
+
     </div>
 
 </div>

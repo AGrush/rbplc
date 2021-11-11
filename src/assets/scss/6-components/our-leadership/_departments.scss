@@ -1,6 +1,6 @@
 .c-departments-wrapper{
   position: relative;
-  
+  background-color: #1f1f1e;
   h2{
     position: absolute;
     top: 30px;
@@ -54,6 +54,8 @@
   align-items: flex-start;
   padding: 120px 0;
   position: relative;
+  max-width: 1750px;
+  margin: 0 auto 8px;
 
   @media (max-width: $tablet-width){
     padding: 60px 0 10px;
@@ -61,7 +63,7 @@
 
   @media (max-width: $mobile-width){
     height: 556px;
-        padding: 60px 0 0;
+        padding: 60px 0 0 0;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -106,6 +108,10 @@
       margin: 13px 6vw;
       padding: 22px 4.4vw;
       min-height: 200px;
+
+      &:nth-of-type(9){
+        margin-right: 0vw;
+      }
     }
 
     .core-purpose{
@@ -158,4 +164,10 @@
     }
   
   }
+}
+
+.mob-fix{
+  width: 6.1vw;
+  position: relative;
+  height: 100%;
 }
