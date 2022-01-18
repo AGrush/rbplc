@@ -9,6 +9,7 @@
         
         <div class="c-simple-page__body">
             <span>
+                
                 <?php the_field('terms_and_conditions_page__section_1__page_body_copy'); ?>
             </span>
         </div>
