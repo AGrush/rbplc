@@ -73,10 +73,10 @@
 
                     // Add extra parameters to src and replcae HTML.
                     $params = array(
-                        'controls'  => 0,
+                        'controls'  => 1,
                         'hd'        => 1,
                         'autoplay'  => 1,
-                        'muted'     => 1,
+                        'muted'     => 0,
                         'autohide'  => 1,
                         'loop'      => 1
                     );

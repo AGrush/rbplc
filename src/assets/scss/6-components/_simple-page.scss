@@ -17,7 +17,7 @@
     margin-bottom: 20px;
 
     @media (max-width: $tablet-width){
-      justify-content: flex-start;
+      justify-content: center;
       margin-bottom: 5px;
     }
 
@@ -41,14 +41,13 @@
   &__spwidget-wrapper {
     position: absolute;
     justify-content: flex-end;
-    top: 0;
+    top: -12px;
     width: 100%;
     align-items: flex-end;
     display: flex;
 
     @media (max-width: $tablet-width){
       height: 64px;
-      position: relative;
       justify-content: center;
     }
   }

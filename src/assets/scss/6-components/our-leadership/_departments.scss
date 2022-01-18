@@ -41,6 +41,10 @@
     top: 53.8%;
     transform: translateY(-50%);
     pointer-events: none;
+
+    @media (max-width: $mobile-width){
+      top: 52.2%;
+    }
   }
 }
 .c-departments {
@@ -62,16 +66,16 @@
   }
 
   @media (max-width: $mobile-width){
-    height: 556px;
-        padding: 60px 0 0 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        justify-content: flex-start;
+    height: 576px;
+    padding: 60px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    justify-content: flex-start;
   }
 
 

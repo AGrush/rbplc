@@ -25,13 +25,12 @@
     }
 
     iframe{
-      border: none; 
       width: 540px;
       transform: scale(0.8);
       margin: 0 auto;
       position: absolute;
       border: none;
-      top: 0px;
+      top: -11px;
       right: -90px;
 
       @media (max-width: $mobile-width){
