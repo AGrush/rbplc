@@ -27,7 +27,7 @@
                     </p> 
                 </div>
                 <div class="button-wrapper">
-                    <a href="<?php the_field('careers_page__section_1__link1__url');?>" class="c-button-1">
+                    <a href="#apply" class="c-button-1">
                         <?php the_field('careers_page__section_1__link1__text');?>
                     </a>
                 </div>
@@ -100,8 +100,8 @@
 </div>
 
 
-<div class="c-careers">
-    <h1>current roles</h1>
+<div class="c-careers" >
+    <h1 id="apply" style="padding-top: 150px; margin-top: -150px;">current roles</h1>
     <p>Filter by department below</p>
     
     <div class="career-selection-section">
@@ -144,7 +144,7 @@
                         <p>Location</p>
                     </div>
                     <div class="career-role__third-col">
-                        <a href="<?php the_field('link_to_job_detailsapplication_page');?>" class="c-button-1">
+                        <a href="<?php echo get_sub_field('link_to_job_detailsapplication_page');?>" class="c-button-1">
                            more info
                         </a>
                     </div>

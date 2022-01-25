@@ -41,4 +41,13 @@ require_once "lib/Mobile_Detect.php";
 //image rules
 require_once('lib/images.php');
 
+
+// remove admin post and commments pages
+add_action('admin_menu', 'remove_options');
+ 
+function remove_options() {
+    remove_menu_page( 'edit.php' );
+    remove_menu_page( 'edit-comments.php' );
+}
+
 ?>
