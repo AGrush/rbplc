@@ -2,7 +2,7 @@
 if(document.querySelector('.c-category')){
   
   
-  allCategoryWidgets = document.querySelectorAll('.c-category')
+  let allCategoryWidgets = document.querySelectorAll('.c-category')
   
   allCategoryWidgets.forEach(widget=>{
     let plusBtn = widget.querySelector('.c-plus')

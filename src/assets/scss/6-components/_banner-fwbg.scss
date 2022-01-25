@@ -1,0 +1,143 @@
+.c-banner-fwbg{
+  display: flex;
+  position: relative;
+  min-height: 900px;
+  @media (max-width: $tablet-width){
+    min-height: 600px;
+  }
+  width: 100%;
+
+  &__bg_image{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-position: 100%;
+    z-index: 0;
+
+    @media (max-width: 1439px){
+      object-position: 70%;
+    }
+
+    @media (max-width: $tablet-width){
+      object-position: 60% 0%;
+    }
+  }
+
+  .copy-wrapper{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    z-index: 1;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 44px;
+    margin-top: 54px;
+    @media (max-width: $tablet-width){
+      width: 70%;
+      margin-left: 60px;
+    }
+
+    @media (max-width: $mobile-width){
+      margin-left: 30px;
+      width: 100%;
+      margin-right: 30px;
+      margin-bottom: 24px;
+      margin-top: 34px;
+    }
+
+    >h2{
+      margin-bottom: 32px;
+      
+      @media (max-width: $tablet-width){
+        margin-bottom: 20px;
+      }
+
+      span:nth-of-type(1) {
+        font-family: SweetSans;
+        margin-right: 10px;
+        letter-spacing: 1.5px;
+        font-size: 40px;
+
+        @media (max-width: $tablet-width){
+          font-size: 30px;
+          display: block;
+          line-height: 0.7;
+        }
+      }
+
+      span:nth-of-type(2) {
+        font-family: SweetSansBold;
+        font-variant: small-caps;
+        bottom: -1px;
+        position: relative;
+        font-size: 42px;
+
+        @media (max-width: $tablet-width){
+          font-size: 30px;
+        }
+
+
+        @media (max-width: $mobile-width){
+          // color: #fff;
+        }
+      }
+    }
+
+    .button-wrapper{
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin-bottom: 22px;
+
+      .c-button-1{
+        background: #fff;
+        color: #000;
+        border: none;
+        margin-bottom: 14px;
+        cursor: pointer;
+
+        @media (max-width: $tablet-width){
+          margin-bottom: 10px;
+        }
+      }
+
+      .c-button-1:hover{
+        background: #000;
+        color: #fff;
+      }
+    }
+
+    .text-wrapper{
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      background-color: rgba(19, 19, 19, 0.8);
+      justify-content: center;
+      align-items: flex-start;
+      color:#fff; 
+      padding: 24px 30px 30px 30px;
+      max-width: 640px;
+
+      @media (max-width: $tablet-width){
+        max-width: 340px;
+      }
+
+      h3{
+        font-family: SweetSansBold;
+        font-variant: small-caps;
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: 0.97px;
+        margin-bottom: 10px;
+
+        @media (max-width: $tablet-width){
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
