@@ -168,5 +168,3 @@
         <span class="chevron right"></span>
     </div>
 </div>
-
-
