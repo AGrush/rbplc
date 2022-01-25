@@ -154,6 +154,21 @@ function closeAllMenus() {
     })
 }
 
+//close menus before we leave (so back buton doesnt mess with menu)
+window.onbeforeunload = function () {
+    document.getElementById("openSidebarMenu").checked = false;
+    
+    if(cNavigation.classList.contains('open')){
+        cNavigation.classList.remove('open')
+    }
+
+    if(cHeader.classList.contains('open')){
+        cHeader.classList.remove('open')
+    }
+    closeAllMenus();
+}
+
+
 
 //make header smaller on scroll
 setTimeout(headerSmaller, 100);

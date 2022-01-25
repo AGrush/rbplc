@@ -10,6 +10,7 @@
     overflow: hidden;
     position: relative;
     min-height: 730px;
+    
 
     @media (max-width: $tablet-width){
       padding-left: 30px;
@@ -19,11 +20,8 @@
     @media (max-width: $mobile-width){
       padding-left: 0;
       padding-right: 0;
+      min-height: 640px;
     } 
-
-    >h1{
-
-    }
 
     >p{
       margin-bottom: 35px;
@@ -49,11 +47,16 @@
       @media (max-width: $mobile-width){
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
 
         margin-left: 0px;
         margin-right: 0px;
         justify-content: flex-start;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
 
       .career-menu-item{
@@ -66,6 +69,7 @@
         margin: 0 9px;
 
 
+
         @media (max-width: $tablet-width){
           max-width: 46px;
           margin: 0 11px;
@@ -73,6 +77,14 @@
 
         @media (max-width: $mobile-width){
           min-width: 57px;
+
+          &:first-of-type{
+            margin-left: 22px;
+          }
+  
+          &:last-of-type{
+            margin-right: 22px;
+          }
         } 
 
         &:hover{
@@ -107,6 +119,7 @@
 
       @media (max-width: $mobile-width){
         padding: 20px 0 0;
+        max-height: 385px;
       } 
 
       .line{
@@ -184,7 +197,7 @@
           display: flex;
           align-items: center;
           @media (max-width: $mobile-width){
-            padding-right: 30px;
+            padding-right: 40px;
           } 
 
           a{
