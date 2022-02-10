@@ -160,11 +160,12 @@
     </div>
     <!-- <span class="line"></span> -->
 
-
-
     <div class="pagination-controls">
         <span class="chevron left"></span>
             <p><span class="current-page">1</span> of<span class="total-pages"> 3</span></p>
         <span class="chevron right"></span>
     </div>
+
+
+
 </div>
