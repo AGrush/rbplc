@@ -42,3 +42,15 @@
 .h-hidden{
 	display: none !important;
 }
+
+.h-news-width{
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (max-width: $tablet-width){
+	}
+
+	@media (max-width: $mobile-width){
+	}
+}

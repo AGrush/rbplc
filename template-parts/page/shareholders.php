@@ -16,9 +16,9 @@
       </div>
 
       <!-- <div class="box">
-                <div class="target"> Target </div>
-                <span>In viewport: <strong>false</strong></span>
-            </div> -->
+          <div class="target"> Target </div>
+          <span>In viewport: <strong>false</strong></span>
+      </div> -->
 
       <div class="copy-wrapper" data-id="observedArea">
 
@@ -30,6 +30,15 @@
               <?php the_field('shareholders_page__section_1__title'); ?>
             </h1>
           </div>
+
+          <br>
+          <p style="padding-right: 26px; position: relative;">
+          &#8226; As at 29th of March the company's issued share capital consists of 309,737,250 ordinary shares with a nominal value of 0.01 pence each ("Ordinary Shares"), each share having equal voting rights therefore the number of Ordinary Shares with voting rights is 309,737,250.
+          </p>
+          <br>
+          <p style="padding-right: 26px; position: relative;">
+          &#8226; The below information was last updated on 29th of March 2022
+          </p>
         
           <div class="c-tables">
             <table class="c-table">

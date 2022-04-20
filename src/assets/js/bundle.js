@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import jquery from 'jquery';
 
 import './libraries/countup';
 import './libraries/lazysizes';
@@ -14,3 +15,5 @@ import './components/disclaimer'
 import './components/corporate-responsibility'
 import './components/financial-calendar'
 import './components/careers'
+import './components/news'
+import './core.js'

@@ -1,6 +1,4 @@
-<?php /* Template Name: Simple Page */?>
 <?php get_header("myheader") ?>
-
 
 <div class="o-container o-container--top">
     <div class="o-row">
@@ -8,14 +6,17 @@
             <main role="main">
                 <div <?php post_class('c-page'); ?>>
                     <div class="c-simple-page m-wp">
-                        <div class="c-simple-page__heading m-wp">
+                        <div class="c-simple-page__heading m-wp m-careers">
                             <h1><?php single_post_title(); ?></h1>
+                            <h1>news-article template</h1>
                         </div>
                         <div class="c-simple-page__body m-wp">
                             <span>
                                 <?php the_content(); ?>
                             </span>
                         </div>
+
+                        <p>Custom fields optional signup form</p>
                     </div>
                 </div>
             </main>
@@ -23,6 +24,3 @@
     </div>
 </div>
 <?php get_footer(); ?>
-
-
-                    

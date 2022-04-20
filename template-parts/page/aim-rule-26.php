@@ -1,7 +1,7 @@
 <div <?php post_class('c-page'); ?>>
 
     <div class="c-simple-page">
-
+        
         <div class="c-simple-page__heading">
             <div class="c-simple-page__spwidget-wrapper">
                 <iframe class="c-simple-page__brighterir-spwidget"
