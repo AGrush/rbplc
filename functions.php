@@ -130,16 +130,21 @@ add_action( 'wp_enqueue_scripts', 'localise_script' );
 
 function more_post_ajax(){
 
-    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 6;
-    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
 
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+    $page_id = (isset(($_POST['cid']))) ? ($_POST['cid']) : '';
+    
     header("Content-Type: text/html");
 
     $args = array(
         'suppress_filters' => true,
         'post_type' => 'news',
         'posts_per_page' => $ppp,
-        'paged'    => $page,
+        'cat' => $page_id,
+        'paged' => $page,
+        'order' => 'DESC',
+        'orderby' => 'date',
     );
 
     $loop = new WP_Query($args);
@@ -148,6 +153,7 @@ function more_post_ajax(){
 
     if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
         locate_template('template-parts/template/news-card.php', true, false);
+        // '<p>' . $page_id . '</p>';
     endwhile;
     endif;
     wp_reset_postdata();
@@ -156,4 +162,8 @@ function more_post_ajax(){
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+
+
+
 ?>

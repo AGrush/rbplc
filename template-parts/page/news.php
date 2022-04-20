@@ -19,10 +19,16 @@
             </div>
         </div>
 
+        <div class="h-news-width">
+            <span>
+                <?php the_content(); ?>
+            </span>
+        </div>
+
         <div id="ajax-posts" class="c-news-page__items h-news-width">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $postsPerPage = 6;
+            $postsPerPage = 3;
             $args = array(
                 'post_type' => 'news',
                 'post_status' => 'publish',
@@ -40,27 +46,7 @@
                 while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
                     <!-- CUSTOM CODE -->
-                    <div class="item">
-                        <?php
-                        if ( has_post_thumbnail() ) {
-                            the_post_thumbnail();
-                        } ?>
-                        <div class="item-top-bits">
-                            <span class="category">
-                                <?php the_category(); 
-                                ?>
-                            </span>
-                            <span class="publish-date">
-                                <?php the_time($format = 'd/m/Y') ?>
-                            </span>
-                        </div>
-                         
-                        <?php the_title( '<h2 class="item-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-                       
-                       
-                        <a href="<?php the_permalink() ?>" class="read-more">Read More <span>&#x2192;</span></a>
-                        <br>
-                    </div>
+                    <?php locate_template('template-parts/template/news-card.php', true, false);  ?>
                     
                 <?php endwhile; wp_reset_postdata(); ?>
                
@@ -68,17 +54,29 @@
             </div>
 
            
-            <a id="more_posts">Load More</a>
+            <a id="more_posts"></a>
             <br><br><br>
 
      
+        <div class="h-news-width">
+            <div class="c-join-rev-box">
+                <?php $image = get_field('join_the_rev_box_img');
+                    if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
 
-
-        <div class="c-simple-page__body m-wp">
-            <span>
-                <?php the_content(); ?>
-            </span>
+                <div class="content">
+                    <h2><?php the_field('join_the_rev_box_heading'); ?></h2>
+                    <p><?php the_field('join_the_rev_box_body'); ?></p>
+                    <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+                </div>
+            </div>
         </div>
+
+
+
+            
+
 
     </div>
 </div>

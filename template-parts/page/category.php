@@ -1,62 +1,92 @@
 <div <?php post_class('c-page'); ?>>
 
-    <div class="c-simple-page m-wp">
-        <div class="c-simple-page__heading m-wp">      
-            <h1><?php 
-            $current_category = single_cat_title();
-            echo $current_category; 
-            ?></h1>
+    <div class="c-news-page">
+        <div class="c-news-page__heading">
+            <div class="h-news-width">
+                <h1>
+                    <?php  
+                        $current_category = single_cat_title();
+                        echo $current_category;  
+                    ?>
+            </h1>
+            </div>  
         </div>
-        <div class="c-simple-page__body m-wp">
+
+        <!-- FILTER MENU -->
+        <div class="full-width-wrapper m-border-bottom">
+            <div class="h-news-width">
+                <nav class="news-nav" role="navigation" aria-label="<?php esc_html_e( 'News Navigation', '_themename' ) ?> ">
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'news-menu'
+                        )) 
+                    ?>
+                </nav>
+            </div>
+        </div>
+
+        <div class="h-news-width">
             <span>
                 <?php the_content(); ?>
             </span>
         </div>
 
-        <!-- FILTER MENU -->
-        <nav class="news-nav" role="navigation" aria-label="<?php esc_html_e( 'News Navigation', '_themename' ) ?> ">
-            <?php wp_nav_menu( array(
-                'theme_location' => 'news-menu'
-                )) 
-            ?>
-        </nav>
-
-
-
+        <div id="ajax-posts" class="c-news-page__items h-news-width">
         <?php 
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $postsPerPage = 3;
             $page_id = get_queried_object_id();
 
             $args = array(
                 'post_type' => 'news',
+                'post_status' => 'publish',
+                'posts_per_page' => $postsPerPage,
                 'cat' => $page_id,
-                'paged' => $paged
+                // 'posts_per_page' => get_option('posts_per_page'),
+                'order' => 'DESC',
+                'orderby' => 'date',
+                // 'paged' => $paged
             );
-            $loop = new WP_Query( $args ) ;
-        ?>
+            // $my_query = null;
+            $my_query = new WP_Query($args);
 
-        
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            if($my_query->have_posts()):
 
-            <!-- CUSTOM CODE -->
-            <?php
-            if ( has_post_thumbnail() ) {
-                the_post_thumbnail();
-            } ?>
-            <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-            <!-- <div class="entry-content">
-                <?php the_content(); ?>
-            </div> -->
-            <?php the_category() ?>
-            <?php the_time($format = 'd/m/Y') ?>
-            <a href="<?php the_permalink() ?>" class="read-more">Read More</a>
-            <br>
+                while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-        <?php endwhile; ?>
+                    <!-- CUSTOM CODE -->
+                    <?php locate_template('template-parts/template/news-card.php', true, false);  ?>
+                    
+                <?php endwhile; wp_reset_postdata(); ?>
+               
+            <?php  endif;?>
+            </div>
 
-       
+           
+            <a id="more_posts" data-cid="<?php echo $page_id ?>"></a>
+            <br><br><br>
+
+     
+        <div class="h-news-width">
+            <div class="c-join-rev-box">
+                <?php $image = get_field('join_the_rev_box_img');
+                    if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+
+                <div class="content">
+                    <h2><?php the_field('join_the_rev_box_heading'); ?></h2>
+                    <p><?php the_field('join_the_rev_box_body'); ?></p>
+                    <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+                </div>
+            </div>
+        </div>
+
+
+
+            
+
+
     </div>
 </div>
-
 
 

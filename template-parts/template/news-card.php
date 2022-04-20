@@ -5,7 +5,8 @@
     } ?>
     <div class="item-top-bits">
         <span class="category">
-            <?php the_category(); 
+            <?php 
+              is_category() ? single_cat_title() : the_category();
             ?>
         </span>
         <span class="publish-date">
