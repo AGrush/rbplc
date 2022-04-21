@@ -71,6 +71,7 @@
             $image = get_field('join_the_rev_box_img', $term);
             $heading = get_field('join_the_rev_box_heading', $term);
             $body = get_field('join_the_rev_box_body', $term);
+            $link = get_field('join_the_rev_box_page_link', $term);
         ?>
         <?php if( !empty( $image ) ): ?>
         <div class="h-news-width">
@@ -79,7 +80,7 @@
                 <div class="content">
                     <h2><?php echo $heading; ?></h2>
                     <p><?php echo $body; ?></p>
-                    <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+                    <a href="<?php echo $link;?>" class="read-more">Sign Up Now<span>&#x2192;</span></a>
                 </div>
             </div>
         </div>

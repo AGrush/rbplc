@@ -17,6 +17,11 @@
     min-width: 192px;
     text-align: center;
     transition: 0.1s all;
+    @media (max-width: $tablet-width){
+      font-size: 12px;
+      padding: 14px 0 12px;
+      min-width: 162px;
+    }
   }
 
   #more_posts:after{
@@ -73,6 +78,10 @@
       margin-bottom: 5px;
     }
 
+     @media (max-width: $mobile-width){
+      min-height: 60px;
+      }
+
     h1{
       padding: 0 32px;
       font-variant: initial;
@@ -82,13 +91,11 @@
 
       @media (max-width: $tablet-width){
         max-width: 800px;
+        padding: 0;
       }
 
       @media (max-width: $mobile-width){
-      font-size: 30px;
-      max-width: 300px;
-      text-align: center;
-      text-transform: lowercase;
+        font-size: 25px;
       }
     }
   }
@@ -98,17 +105,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 34px 0;
+    justify-content: space-between;
 
     .item{
       width: 29%;
       margin: 0 2.1%;
       padding-bottom: 40px;
 
+      @media (max-width: $tablet-width){
+        margin: initial;
+      }
+
+      @media (max-width: $mobile-width){
+
+        width: 100%;
+      }
+
       .item-top-bits{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 5px 0;
+
+        @media (max-width: $mobile-width){
+          padding: 5px 0 10px;
+        }
       }
 
       .category ul{
@@ -125,6 +146,9 @@
         font-style: italic;
         letter-spacing: 0.44px;
         color: #ff2a78;
+        @media (max-width: $tablet-width){
+          font-size: 12px;
+        }
       }
 
       .category{
@@ -133,6 +157,9 @@
         font-style: italic;
         letter-spacing: 0.44px;
         color: #ff2a78;
+        @media (max-width: $tablet-width){
+          font-size: 12px;
+        }
       }
 
       .publish-date{
@@ -141,6 +168,12 @@
         letter-spacing: 0.44px;
         color: #1f1f1e;
         line-height: 1.3;
+        padding-left: 10px;
+        @media (max-width: $tablet-width){
+          font-size: 10px;
+            position: relative;
+            top: 2px;
+        }
       }
 
       .item-title{
@@ -150,6 +183,9 @@
         letter-spacing: 1px;
         font-size: 36px;
         margin-bottom: 12px;
+        @media (max-width: $tablet-width){
+          font-size: 24px;
+        }
       }
 
       .read-more{
@@ -158,6 +194,9 @@
         line-height: 1.06;
         letter-spacing: 0.5px;
         font-size: 16px;
+        @media (max-width: $tablet-width){
+          font-size: 14px;
+        }
 
         span{
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -165,6 +204,9 @@
           color: #ff2a78;
           position: relative;
           top: 3px;
+          @media (max-width: $tablet-width){
+            font-size:18px;
+          }
         }
       }
     }
@@ -176,11 +218,28 @@
 }
 
 .c-news-page .news-nav{
+
+  @media (max-width: $mobile-width){
+    left: -22px;
+    position: relative;
+    width: calc(100% + 44px);
+  }
+  
   #menu-news-menu{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 15px 10px;
+    padding: 15px 30px;
+    @media (max-width: $tablet-width){
+      padding: 10px 0;
+    }
+
+    @media (max-width: $mobile-width){
+      padding: 10px 0;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow-y: auto;
+    }
   }
 
   .current-menu-item a:after{
@@ -190,13 +249,24 @@
   }
 
   .menu-item{
-    padding: 2px 22px;
+    padding: 2px 32px 2px 0;
+
+    @media (max-width: $mobile-width){
+      padding: 2px 22px 2px 0;
+
+      &:first-of-type{
+        padding-left: 22px;
+      }
+    }
   }
 
   .menu-item a{
     font-family: 'SweetSansBold';
     font-size: 14px;
     text-transform: uppercase;
+    @media (max-width: $tablet-width){
+      font-size: 12px;
+    }
   }
 }
 
@@ -207,9 +277,24 @@
   flex-direction: row;
   margin-bottom: 60px;
   margin-top: 60px;
-
+  
+  @media (max-width: $mobile-width){
+    flex-direction: column;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   > img{
     max-width: 440px;
+    align-self: center;
+    object-fit: cover;
+
+    @media (max-width: $tablet-width){
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+   
+    }
   }
 
   .content{
@@ -217,6 +302,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: $tablet-width){
+      padding: 0 30px 0 40px;
+    }
+
+    @media (max-width: $mobile-width){
+      padding: 25px 0 0;
+    }
 
     h2{
       font-family: 'SweetSansBold';
@@ -227,11 +320,25 @@
       margin-bottom: 12px;
       max-width: 400px;
       margin-bottom: 20px;
+
+      @media (max-width: $tablet-width){
+        font-size: 24px;
+        margin-bottom: 12px;
+
+      }
+
     }
     p{
       font-family: 'SweetSans';
       font-size: 16px;
       margin-bottom: 20px;
+
+      @media (max-width: $tablet-width){
+        font-size: 14px;
+        margin-bottom: 12px;
+
+      }
+
     }
     a{
         font-family: 'SweetSansBold';
@@ -240,6 +347,10 @@
         letter-spacing: 0.5px;
         font-size: 18px;
 
+        @media (max-width: $tablet-width){
+          font-size: 14px;
+        }
+
         span{
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
           font-size:20px;
@@ -247,6 +358,8 @@
           position: relative;
           top: 3px;
           padding-left: 3px;
+
+          
         }
     }
   }
@@ -277,16 +390,26 @@
 
   .back-strip{
     padding: 16px 0;
+    @media (max-width: $mobile-width){
+      padding: 8px 0;
+    }
+
     a{
       font-family: 'SweetSansBold';
       font-size: 14px;
       text-transform: uppercase;
+      @media (max-width: $mobile-width){
+        font-size: 12px;
+      }
       .arrow{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 20px;
         position: relative;
         top: 2px;
         padding-right: 5px;
+        @media (max-width: $mobile-width){
+          font-size: 16px;
+        }
       }
     }
   }
@@ -305,18 +428,24 @@
         flex-direction: row;
         flex-wrap: wrap;
         list-style-type: none;
-        // justify-content: center;
-
+        justify-content: center;
+        @media (max-width: $mobile-width){
+          justify-content: flex-start;
+        }
         li{
           padding: 5px 10px 0 0;
-
           font-style: italic;
           letter-spacing: 0.44px;
-
+          @media (max-width: $mobile-width){
+            padding: 1px 10px 0 0;
+          }
 
           a{
             font-family: 'SweetSansBold';
             color: #ff2a78;
+            @media (max-width: $mobile-width){
+              font-size: 12px;
+            }
           }
         }
       }
@@ -327,28 +456,27 @@
       font-variant: initial;
       margin-bottom: 16px;
       font-size: 40px;
-
-      &.m-center{
-        text-align: center;
+      text-align: center;
+      @media (max-width: $mobile-width){
+        text-align: left;
       }
     }
-
   }
 
-  &__body.m-center{
-    ul{
-      justify-content: center;
-    }
-  }
-  
   &__the-content{
     h2{
       font-family: 'SweetSans';
+      @media (max-width: $mobile-width){
+        text-align: left;
+      }
     }
 
     h3{
       line-height: 2;
       font-family: 'SweetSansBold';
+      @media (max-width: $mobile-width){
+        text-align: left;
+      }
     }
 
     p{
@@ -364,6 +492,9 @@
       max-width: 690px;
       margin: 0 auto;
       padding-bottom: 16px;
+      @media (max-width: $mobile-width){
+        text-align: left;
+      }
     }
 
     a:not(.m-pink){
@@ -379,6 +510,9 @@
       font-family: 'SweetSansMedium';
       width: auto;
       display: inline-block;
+       @media (max-width: $mobile-width){
+        text-align: left;
+      }
     }
 
     a.m-pink:after{
@@ -408,15 +542,40 @@
   padding: 20px 0;
   font-size: 14px;
 
+  @media (max-width: $tablet-width){
+    padding: 16px 0;
+  }
+
+  @media (max-width: $mobile-width){
+    flex-direction: column;
+  }
 
   h4{
     font-family: 'SweetSansBold';
     text-transform: uppercase;
     padding-right: 70px;
+    @media (max-width: $tablet-width){
+      padding-right: 30px;
+      font-size: 13px;
+    }
+
+
+    @media (max-width: $mobile-width){
+      padding-bottom: 6px;
+    }
   }
   a{
-    font-family: 'SweetSansBold';
+    font-family: 'SweetSansMedium';
     padding-right: 70px;
+    @media (max-width: $tablet-width){
+      padding-right: 30px;
+      font-size: 13px;
+    }
+    @media (max-width: $mobile-width){
+      &:not(:last-of-type){
+        padding-bottom: 4px;
+      } 
+    }
   }
 }
 
@@ -455,6 +614,12 @@
   color: #1f1f1e;
   font-size: 18px;
   text-align: center;
+  margin-bottom: 30px!important;
+
+  @media (max-width: $mobile-width){
+    font-size: 16px;
+
+  }
 }
 
 .tcs-text{

@@ -22,11 +22,11 @@
                         </div>
                         
 
-                        <div class="c-single-news__body h-news-width <?php the_field('content_alignment'); ?>">
+                        <div class="c-single-news__body h-news-width ">
                             <div href="" class="cat-name">
                                 <?php the_category() ?>
                             </div>
-                            <h1 class="<?php the_field('content_alignment'); ?>"><?php single_post_title(); ?></h1>
+                            <h1><?php single_post_title(); ?></h1>
 
                             <div class="c-single-news__the-content">
                                 <?php the_content(); ?>
