@@ -130,16 +130,21 @@ add_action( 'wp_enqueue_scripts', 'localise_script' );
 
 function more_post_ajax(){
 
+
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
     $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
-
+    $page_id = (isset(($_POST['cid']))) ? ($_POST['cid']) : '';
+    
     header("Content-Type: text/html");
 
     $args = array(
         'suppress_filters' => true,
         'post_type' => 'news',
         'posts_per_page' => $ppp,
-        'paged'    => $page,
+        'cat' => $page_id,
+        'paged' => $page,
+        'order' => 'DESC',
+        'orderby' => 'date',
     );
 
     $loop = new WP_Query($args);
@@ -147,23 +152,8 @@ function more_post_ajax(){
     $out = '';
 
     if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
-        $out .= '<div class="item">' 
-                    . the_post_thumbnail() .
-                    '<div class="item-top-bits">
-                        <span class="category">'
-                            . the_category() .
-                        '</span>
-                        <span class="publish-date">'
-                            . the_time($format = 'd/m/Y') .
-                        '</span>
-                    </div>'
-                    .
-                    the_title( '<h2 class="item-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' )
-                    .
-                    '<a href="<?php the_permalink() ?>" class="read-more">Read More <span>&#x2192;</span></a>
-                    <br>
-                </div>';
-
+        locate_template('template-parts/template/news-card.php', true, false);
+        // '<p>' . $page_id . '</p>';
     endwhile;
     endif;
     wp_reset_postdata();
@@ -172,4 +162,15 @@ function more_post_ajax(){
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+
+
+// helper
+function get_page_id_by_title($title)
+{
+$page = get_page_by_title($title);
+return $page->ID;
+}
+
+
 ?>

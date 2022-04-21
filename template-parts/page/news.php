@@ -28,7 +28,7 @@
         <div id="ajax-posts" class="c-news-page__items h-news-width">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $postsPerPage = 3;
+            $postsPerPage = 6;
             $args = array(
                 'post_type' => 'news',
                 'post_status' => 'publish',
@@ -55,24 +55,21 @@
 
            
             <a id="more_posts"></a>
-            <br><br><br>
+            
 
-     
-        <div class="h-news-width">
-            <div class="c-join-rev-box">
-                <?php $image = get_field('join_the_rev_box_img');
-                    if( !empty( $image ) ): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <?php endif; ?>
-
-                <div class="content">
-                    <h2><?php the_field('join_the_rev_box_heading'); ?></h2>
-                    <p><?php the_field('join_the_rev_box_body'); ?></p>
-                    <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+            <?php $image = get_field('join_the_rev_box_img');?>
+            <?php if( !empty( $image ) ): ?>
+            <div class="h-news-width">
+                <div class="c-join-rev-box">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <div class="content">
+                        <h2><?php the_field('join_the_rev_box_heading'); ?></h2>
+                        <p><?php the_field('join_the_rev_box_body'); ?></p>
+                        <a href="<?php the_field('join_the_rev_box_page_link');?>" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-
+            <?php endif; ?>
 
 
             

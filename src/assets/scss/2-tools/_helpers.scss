@@ -14,7 +14,7 @@
 
 .h-show_only {
 	&-s {
-		@media (min-width: $mobile-width + 1){
+		@media (min-width: ($mobile-width + 1)){
 			display: none !important;
 		}
 	}
@@ -23,7 +23,7 @@
 		@media (max-width: $mobile-width){
 			display: none !important;
 		}
-		@media (min-width: $tablet-width + 1){
+		@media (min-width: ($tablet-width + 1)){
 			display: none !important;
 		}
 	}
@@ -45,9 +45,10 @@
 
 .h-news-width{
 	max-width: 1300px;
-	width: 100%;
+	width: calc(100% - 100px);
 	margin: 0 auto;
-
+	padding-left: 50px!important;
+	padding-right: 50px!important;
 	@media (max-width: $tablet-width){
 	}
 

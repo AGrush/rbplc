@@ -297,8 +297,6 @@
     .cat-name{
       margin-bottom: 30px;
       margin-top: 5px;
-      font-family: 'SweetSansBold';
-      color: #ff2a78;
 
       ul{
         display: flex;
@@ -325,146 +323,22 @@
     h1{
       text-transform: initial;
       font-variant: initial;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       font-size: 40px;
-
-      &.m-center{
-        text-align: center;
-      }
     }
 
   }
 
-  &__body.m-center{
-    ul{
-      justify-content: center;
-    }
-  }
-  
   &__the-content{
-    h2{
-      font-family: 'SweetSans';
-    }
-
     h3{
       line-height: 2;
-      font-family: 'SweetSansBold';
-    }
-
-    p{
-      font-family: 'SweetSansMedium';
-      font-family: 'SweetSansMedium';
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.31;
-      letter-spacing: 0.44px;
-      text-align: center;
-      color: #1f1f1e;
-      max-width: 690px;
-      margin: 0 auto;
-      padding-bottom: 16px;
-    }
-
-    a:not(.m-pink){
-      font-family: 'SweetSansBold';
-      text-decoration: underline!important;
-      color: #1f1f1e;
-    }
-
-    a.m-pink{
-      font-family: 'SweetSansBold';
-      color: #ff1c6f;
-      text-transform: uppercase;
-      font-family: 'SweetSansMedium';
-      width: auto;
-      display: inline-block;
-    }
-
-    a.m-pink:after{
-      content: '';
-      display: block;
-      border-bottom: 1px solid #ff1c6f;;
     }
   }
 }
 
-.full-width-wrapper{
-  width: 100%;
-  &.m-border-bottom{
-    border-bottom: solid 1px #d0d0d0;
-  }
-
-  &.m-pr-team{
-    border-bottom: solid 1px #d0d0d0;
-    border-top: solid 1px #d0d0d0;
-    padding: 5px 0;
-  }
-} 
-
-.pr-contact{
-  display: flex;
-  flex-direction: row;
-  padding: 20px 0;
-  font-size: 14px;
-
-
-  h4{
-    font-family: 'SweetSansBold';
-    text-transform: uppercase;
-    padding-right: 70px;
-  }
-  a{
-    font-family: 'SweetSansBold';
-    padding-right: 70px;
-  }
-}
-
-
-
-// SIGNUP PAGE
-
-
-.wpforms-container.signup-page{
-  text-align: center;
-}
-
-.wpforms-container.signup-page .wpforms-field-container{
-  width: 280px;
-  margin: 0 auto;
-}
-.wpforms-container.signup-page input {
-  max-width: 100%!important;
-  border: none!important;
-  border-bottom: 1px solid rgb(113, 113, 113)!important;
-}
-.wpforms-container.signup-page .wpforms-submit-container{
-  text-align: center;
-}
-
-.wpforms-container.signup-page .wpforms-confirmation-container-full{
-  background: transparent;
-  border: none;
-}
-
-
-
-.signup-text{
-  font-family: 'SweetSansMedium';
-  max-width: 400px;
-  color: #1f1f1e;
-  font-size: 18px;
-  text-align: center;
-}
-
-.tcs-text{
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  a{
-    font-family: 'SweetSansBold';
-    text-decoration: underline!important;
-    color: #1f1f1e;
-  }
-
-}
+// .full-width-wrapper{
+//   width: 100%;
+//   &.m-border-bottom{
+//     border-bottom: solid 1px #d0d0d0;
+//   }
+// } 

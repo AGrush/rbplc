@@ -58,32 +58,32 @@ function remove_options() {
 
 
 // PAGINATION FUNCTION
-function post_pagination($paged = '', $max_page = '') {
-    if (!$paged) {
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : ((get_query_var('page')) ? get_query_var('page') : 1);
-    }
+// function post_pagination($paged = '', $max_page = '') {
+//     if (!$paged) {
+//         $paged = (get_query_var('paged')) ? get_query_var('paged') : ((get_query_var('page')) ? get_query_var('page') : 1);
+//     }
 
-    if (!$max_page) {
-        global $wp_query;
-        $max_page = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
-    }
+//     if (!$max_page) {
+//         global $wp_query;
+//         $max_page = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
+//     }
 
-    $big  = 999999999; // need an unlikely integer
+//     $big  = 999999999; // need an unlikely integer
 
-    $html = paginate_links(array(
-        'base'       => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-        'format'     => '?paged=%#%',
-        'current'    => max(1, $paged),
-        'total'      => $max_page,
-        'mid_size'   => 1,
-        'prev_text'  => __('« Prev'),
-        'next_text'  => __('Next »'),
-    ));
+//     $html = paginate_links(array(
+//         'base'       => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+//         'format'     => '?paged=%#%',
+//         'current'    => max(1, $paged),
+//         'total'      => $max_page,
+//         'mid_size'   => 1,
+//         'prev_text'  => __('« Prev'),
+//         'next_text'  => __('Next »'),
+//     ));
 
-    $html = "<div class='navigation pagination'>" . $html . "</div>";
+//     $html = "<div class='navigation pagination'>" . $html . "</div>";
 
-    echo $html;
-}
+//     echo $html;
+// }
 
 
 
@@ -116,7 +116,6 @@ add_action( 'init', 'create_posttype' );
 // flush_rewrite_rules();
 
 
-
 // custom AJAX load more blog call
 function localise_script() {
     wp_localize_script( '_themename-scripts', 'ajax_posts', array(
@@ -128,10 +127,10 @@ add_action( 'wp_enqueue_scripts', 'localise_script' );
 
 
 
+
 function more_post_ajax(){
 
-
-    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 6;
     $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
     $page_id = (isset(($_POST['cid']))) ? ($_POST['cid']) : '';
     
@@ -163,7 +162,11 @@ function more_post_ajax(){
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
-
-
+// helper
+function get_page_id_by_title($title)
+{
+$page = get_page_by_title($title);
+return $page->ID;
+}
 
 ?>

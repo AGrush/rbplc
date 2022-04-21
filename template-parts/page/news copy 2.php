@@ -3,12 +3,7 @@
     <div class="c-news-page">
         <div class="c-news-page__heading">
             <div class="h-news-width">
-                <h1>
-                    <?php  
-                        $current_category = single_cat_title();
-                        echo $current_category;  
-                    ?>
-            </h1>
+                <h1><?php single_post_title(); ?></h1>
             </div>  
         </div>
 
@@ -33,14 +28,11 @@
         <div id="ajax-posts" class="c-news-page__items h-news-width">
         <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-            $postsPerPage = 6;
-            $page_id = get_queried_object_id();
-
+            $postsPerPage = 3;
             $args = array(
                 'post_type' => 'news',
                 'post_status' => 'publish',
                 'posts_per_page' => $postsPerPage,
-                'cat' => $page_id,
                 // 'posts_per_page' => get_option('posts_per_page'),
                 'order' => 'DESC',
                 'orderby' => 'date',
@@ -62,28 +54,23 @@
             </div>
 
            
-            <a id="more_posts" data-cid="<?php echo $page_id ?>"></a>
+            <a id="more_posts"></a>
+            
 
-        <?php
-            // get the current taxonomy term
-            $term = get_queried_object();
-            // vars
-            $image = get_field('join_the_rev_box_img', $term);
-            $heading = get_field('join_the_rev_box_heading', $term);
-            $body = get_field('join_the_rev_box_body', $term);
-        ?>
-        <?php if( !empty( $image ) ): ?>
-        <div class="h-news-width">
-            <div class="c-join-rev-box">
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <div class="content">
-                    <h2><?php echo $heading; ?></h2>
-                    <p><?php echo $body; ?></p>
-                    <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+            <?php $image = get_field('join_the_rev_box_img');?>
+            <?php if( !empty( $image ) ): ?>
+            <div class="h-news-width">
+                <div class="c-join-rev-box">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <div class="content">
+                        <h2><?php the_field('join_the_rev_box_heading'); ?></h2>
+                        <p><?php the_field('join_the_rev_box_body'); ?></p>
+                        <a href="#" class="read-more">Sign Up Now<span>&#x2192;</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php endif; ?>
+            <?php endif; ?>
+
 
             
 
