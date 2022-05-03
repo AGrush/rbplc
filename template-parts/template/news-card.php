@@ -1,8 +1,10 @@
 <div class="item">
     <?php
-    if ( has_post_thumbnail() ) {
-        the_post_thumbnail();
-    } ?>
+    if ( has_post_thumbnail() ) {  ?>
+      <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>">
+        <?php the_post_thumbnail(); ?>
+      </a>
+    <?php } ?>
     <div class="item-top-bits">
         <span class="category">
             <?php 

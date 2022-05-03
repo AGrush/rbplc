@@ -11,7 +11,14 @@
                         <?php $image = get_field('rev_news_main_img');?>
                         <?php if( !empty( $image ) ): ?>
                             <div class="header-img-wrapper">
-                                <img class="header-img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <img class="header-img h-hide-s" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            </div>
+                        <?php endif; ?>
+
+                        <?php $image2 = get_field('rev_news_main_img_mobile');?>
+                        <?php if( !empty( $image2 ) ): ?>
+                            <div class="header-img-wrapper">
+                                <img class="header-img h-show_only-s" src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>" />
                             </div>
                         <?php endif; ?>
 
